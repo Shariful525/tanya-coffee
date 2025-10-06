@@ -26,11 +26,11 @@ const AboutUs = () => {
         <p className="text-center ">
           Our team is a mix of
           <span className="text-primary font-semibold"> DREAMERS</span> &{" "}
-          <span>DOERS</span>, we <span>are MISFITS </span> for a cause & we are{" "}
-          <span>REBELS </span> for a cause when it comes to formulating{" "}
-          <span>custom-made</span> advertising, marketing, website/mobile app
+          <span className="text-primary font-semibold">DOERS</span>, we <span className="text-primary font-semibold">are MISFITS </span> for a cause & we are{" "}
+          <span className="text-primary font-semibold">REBELS </span> for a cause when it comes to formulating{" "}
+          <span className="text-primary font-semibold">custom-made</span> advertising, marketing, website/mobile app
           design & development, event management & more wonders{" "}
-          <span>FOR YOU</span>.
+          <span className="text-primary font-semibold">FOR YOU</span>.
         </p>
 
         <div className="relative max-w-md mx-auto bg-white rounded-[20px] p-[clamp(20px,1.5vw,32px)] text-center">
