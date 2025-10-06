@@ -7,7 +7,7 @@ import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
 
 const AboutUs = () => {
   return (
-    <div className="max-w-[470px] mx-auto ">
+    <div className="">
       <InnerShadow
         text="About Us"
         className="mx-auto"

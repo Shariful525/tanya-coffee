@@ -56,7 +56,7 @@ const ContactForCoffee = () => {
   };
 
   return (
-    <div className="bg-primary rounded-[20px] p-5 max-w-[470px] mx-auto">
+    <div className="bg-primary rounded-[20px] p-5">
       <Image src={assets.contactPhoto} alt="" className="px-4" />
       <form onSubmit={handleSubmit} className="text-white space-y-4">
         <CustomInput

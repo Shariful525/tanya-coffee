@@ -3,10 +3,11 @@ import React from "react";
 import ProjectDetailsCard from "../cards/ProjectDetailsCard";
 import Image from "next/image";
 import { assets } from "@/assets/images";
+import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
 
 const OurWork = () => {
   return (
-    <div className="max-w-[470px] mx-auto space-y-5">
+    <div className="">
       <div className="bg-white rounded-2xl p-5 relative text-center">
         <div className=" w-[200px] h-[200px] flex justify-center items-center mx-auto rounded-full overflow-hidden border-4 border-white shadow-md">
           <Image
@@ -38,15 +39,15 @@ const OurWork = () => {
       </div>
       <div className="mx-auto w-full text-center space-y-6 mt-12">
         <h2 className="text-2xl font-bold  uppercase ">
-          SOME OF OUR & OUR CLIENTS WORK
+          SOME OF OUR & OUR CLIENTS <br /> WORK
         </h2>
         <p className="text-gray-600 text-2xl font-bold">
-          (Teamwork made the dream work!)
+          (Teamwork made the <br /> dream work!)
         </p>
 
-        <div className="bg-white rounded-2xl  py-5">
+        <div className="bg-white rounded-2xl  py-10">
           <h3 className="text-xl font-semibold text-primary mb-4">OUR WORK</h3>
-          <div className="w-48 h-48 mx-auto relative">
+          <div className="w-48 h-[250px] mx-auto relative">
             <Image
               src={assets.successMedal.src}
               alt="100% Success Rate Medal"
@@ -59,6 +60,10 @@ const OurWork = () => {
       {projectsData?.map((project, index) => (
         <ProjectDetailsCard data={project} key={index} />
       ))}
+      <ClickForCoffeeButton
+        textClassName="text-sm"
+        className="max-w-[60%] mx-auto justify-center py-3 px-5"
+      />
     </div>
   );
 };

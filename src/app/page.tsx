@@ -13,20 +13,20 @@ import WorkPhilosophy from "@/components/home/WorkPhilosophy";
 
 const Home = () => {
   return (
-    <div>
+    <div className="space-y-10">
       <Hero />
-      <AboutUs />
-      <AdvertisementAndMarketing className="max-w-[470px] mx-auto my-10" />
-      <WorkPhilosophy />
-      <TopCountries />
-      <BelovedClients className="max-w-[470px] mx-auto my-10" />
-      <HappyClientThoughts />
-      <MeetYourDreamTeam />
-      <TopCountries />
-      <BelovedClients />
-      <ContactForCoffee />
-      <OurWork />
-      <WhyChooseUs />
+      <div className="max-w-[470px] mx-auto px-5 space-y-10">
+        <AboutUs />
+        <AdvertisementAndMarketing />
+        <WorkPhilosophy />
+        <HappyClientThoughts />
+        <OurWork />
+        <MeetYourDreamTeam />
+        <TopCountries />
+        <BelovedClients />
+        <ContactForCoffee />
+        <WhyChooseUs />
+      </div>
     </div>
   );
 };

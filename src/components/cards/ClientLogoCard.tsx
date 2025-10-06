@@ -4,10 +4,8 @@ const ClientLogoCard = ({ image, name }: { image: string; name: string }) => {
   return (
     <div
       className="
-      bg-white 
       flex items-center justify-center 
       rounded-xl 
-      shadow-sm 
       border border-black-10
       hover:shadow-md 
       transition-shadow 

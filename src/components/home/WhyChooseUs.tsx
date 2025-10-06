@@ -5,7 +5,7 @@ import NotificationItem from "../shared/NotificationItem";
 
 const WhyChooseUs = () => {
   return (
-    <div className="max-w-[470px] mx-auto rounded-t-[20px] p-5 bg-[linear-gradient(180.26deg,_#C9E6FF_-1.01%,_#FFFFFF_99.78%)] space-y-5  mb-32">
+    <div className="rounded-t-[20px] p-5 bg-[linear-gradient(180.26deg,_#C9E6FF_-1.01%,_#FFFFFF_99.78%)] space-y-5 mb-32">
       <div className="space-y-5  flex flex-col items-center text-center">
         <div className="font-bold text-black-80 text-2xl">
           <h2>Why Choose Us</h2>

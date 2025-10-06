@@ -6,7 +6,7 @@ import { IconPointFilled } from "@tabler/icons-react";
 
 const MeetYourDreamTeam = () => {
   return (
-    <div className="space-y-3.5 max-w-[470px] mx-auto">
+    <div className="">
       <div className="flex flex-col items-center gap-y-5 mx-auto text-center">
         <InnerShadow
           icon={<IconPointFilled className="text-primary" />}

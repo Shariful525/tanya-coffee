@@ -8,7 +8,7 @@ import { ICountry } from "@/interfaces/country.interface";
 
 const TopCountries = () => {
   return (
-    <section className="max-w-[470px] mx-auto">
+    <section className="">
       <div
         className="
           max-w-[60%]

@@ -5,14 +5,20 @@ import Image from "next/image";
 import homeIcon from "@/assets/images/home-menu.png";
 import serviceIcon from "@/assets//images/services-menu.png";
 import coffeeIcon from "@/assets//images/coffee-menu.png";
+import Link from "next/link";
 
 const BottomMenuBar = () => {
   const [active, setActive] = useState("home");
 
   const menus = [
-    { id: "home", label: "Home", icon: homeIcon },
-    { id: "services", label: "Services", icon: serviceIcon },
-    { id: "coffee", label: "Coffee Meeting", icon: coffeeIcon },
+    { id: "home", label: "Home", icon: homeIcon, href: "/" },
+    { id: "services", label: "Services", icon: serviceIcon, href: "/services" },
+    {
+      id: "coffee",
+      label: "Coffee Meeting",
+      icon: coffeeIcon,
+      href: "/coffee-meeting",
+    },
   ];
 
   return (
@@ -32,8 +38,9 @@ const BottomMenuBar = () => {
         {menus.map((menu) => {
           const isActive = active === menu.id;
           return (
-            <button
+            <Link
               key={menu.id}
+              href={menu.href}
               onClick={() => setActive(menu.id)}
               className={`
                 flex items-center justify-center gap-2 px-3 py-2 rounded-full transition-all duration-300
@@ -54,8 +61,10 @@ const BottomMenuBar = () => {
                   } transition-all duration-300`}
                 />
               </div>
-              <span className="font-medium whitespace-nowrap text-[clamp(12px,3.5vw,16px)]">{menu.label}</span>
-            </button>
+              <span className="font-medium whitespace-nowrap text-[clamp(12px,3.5vw,16px)]">
+                {menu.label}
+              </span>
+            </Link>
           );
         })}
       </div>

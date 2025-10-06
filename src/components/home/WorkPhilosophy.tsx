@@ -6,9 +6,9 @@ import { IconQuoteFilled } from "@tabler/icons-react";
 
 const WorkPhilosophy = () => {
   return (
-    <section className="flex flex-col items-center justify-center bg-white py-12 px-4">
-      <div className="max-w-[470px] mx-auto space-y-10">
-        <div className="relative z-10 bg-primary p-5 rounded-[20px] flex flex-col items-center">
+    <section className="flex flex-col items-center justify-center bg-white">
+      <div className="">
+        <div className="relative z-10 bg-primary rounded-[20px] flex flex-col items-center py-10 mb-10">
           <div className="w-[226px] h-[330px] relative mb-4">
             <Image
               src={assets.bransonImage.src}
@@ -19,8 +19,8 @@ const WorkPhilosophy = () => {
             />
           </div>
 
-          <div className=" px-5 pt-5 pb-[35px] text-center">
-            <p className=" text-lg font-medium leading-relaxed text-white relative">
+          <div className="px-5 pt-5 text-center">
+            <p className="text-lg font-medium leading-relaxed text-white relative">
               <span className="absolute -top-10 left-0 text-white rotate-180">
                 {" "}
                 <IconQuoteFilled size={38} stroke={2} />

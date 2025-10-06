@@ -13,7 +13,7 @@ const ProjectDetailsCard = ({ data }: { data?: IProject }) => {
             className="border border-black-10 rounded-lg relative p-2.5 h-[60px] w-[140px] overflow-hidden"
           >
             <Image
-              src={logo ?? ""}
+              src={logo ?? "/demo.png"}
               alt="logo"
               fill
               className="object-contain inset-0 w-full h-full"
