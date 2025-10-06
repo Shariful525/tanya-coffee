@@ -14,21 +14,23 @@ import WorkSummary from "@/components/home/WorkSummary";
 
 const Home = () => {
   return (
-    <div className="space-y-5 px-3.5">
+    <div>
       <Hero />
-      <AboutUs />
-      <AdvertisementAndMarketing className="max-w-[470px] mx-auto my-10" />
-      <WorkPhilosophy />
-      <TopCountries />
-      <BelovedClients className="max-w-[470px] mx-auto my-10" />
-      <HappyClientThoughts />
-      <WorkSummary />
-      <MeetYourDreamTeam />
-      <TopCountries />
-      <BelovedClients />
-      <ContactForCoffee />
-      <OurWork />
-      <WhyChooseUs />
+      <div className="space-y-5 px-5">
+        <AboutUs />
+        <AdvertisementAndMarketing className="max-w-[470px] mx-auto my-10" />
+        <WorkPhilosophy />
+        <TopCountries />
+        <BelovedClients className="max-w-[470px] mx-auto my-10" />
+        <HappyClientThoughts />
+        <WorkSummary />
+        <MeetYourDreamTeam />
+        <TopCountries />
+        <BelovedClients />
+        <ContactForCoffee />
+        <OurWork />
+        <WhyChooseUs />
+      </div>
     </div>
   );
 };

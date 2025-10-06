@@ -57,7 +57,7 @@ const BelovedClients = ({ className }: { className?: string }) => {
           [@media(min-width:400px)]:grid-cols-2 
           md:grid-cols-3 
           lg:grid-cols-4 
-          gap-5 px-5 md:px-0
+          gap-5
         "
       >
         {CLIENT_LOGOS.map((logo) => (
