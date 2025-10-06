@@ -23,7 +23,7 @@ const BottomMenuBar = () => {
           bg-white
           shadow-lg
           rounded-full
-          border border-gray-200
+          border border-white
           px-3 py-2
           w-[90vw] max-w-md
         "

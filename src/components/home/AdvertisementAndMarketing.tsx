@@ -6,7 +6,7 @@ import InnerShadow from "../ui/InnerShadow";
 
 const AdvertisementAndMarketing = () => {
   return (
-    <div>
+    <div className="max-w-[470px] mx-auto">
       <div className="flex flex-col gap-y-5 mb-5">
         <InnerShadow text="SERVICES" className="mx-auto" />
         <h5 className="font-bold text-xl [@media(min-width:400px)]:text-2xl text-center max-w-[90%] mx-auto">

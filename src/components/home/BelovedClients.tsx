@@ -44,7 +44,7 @@ const CLIENT_LOGOS = [
 
 const BelovedClients = () => {
   return (
-    <div className="py-10">
+    <div className="py-10 max-w-[470px] mx-auto">
       <h6 className="font-bold text-xl [@media(min-width:400px)]:text-2xl text-center mb-8">
         Some Of Our <br />
         <b className="text-primary uppercase">Beloved</b> Clients
