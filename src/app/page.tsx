@@ -2,6 +2,8 @@ import ClickForCoffeeButton from "@/components/buttons/ClickForCoffeeButton";
 import HappyClientsCard from "@/components/cards/HappyClientsCard";
 import InnerShadow from "@/components/ui/InnerShadow";
 import { happyClientsData } from "@/constants/happyClientsData";
+import AdvertisementAndMarketing from "@/components/home/AdvertisementAndMarketing";
+import TopCountries from "@/components/home/TopCountries";
 import React from "react";
 
 const Home = () => {
@@ -12,6 +14,10 @@ const Home = () => {
       {happyClientsData?.map((data, i) => (
         <HappyClientsCard data={data} key={i} />
       ))}
+      <div>
+        <AdvertisementAndMarketing />
+        <TopCountries />
+      </div>
     </div>
   );
 };
