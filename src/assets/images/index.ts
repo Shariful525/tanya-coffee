@@ -1,6 +1,22 @@
 import coffeeCup from "@/assets/images/coffeeCup.png";
+import contactPhoto from "@/assets/images/contactPhoto.png";
+import heartSecondary from "@/assets/images/heartSecondary.png";
+import quizDemo from "@/assets/images/quiz.png";
+import gmail from "@/assets/images/gmail.png";
+import whatsapp from "@/assets/images/whatsapp.png";
+import facebook from "@/assets/images/facebook.png";
+import linkedIn from "@/assets/images/linkedinIcon.png";
+import heartPink from "@/assets/images/heartPink.png";
 import aboutUsImage from "@/assets/images/about-us-image.png";
 export const assets = {
   coffeeCup,
+  contactPhoto,
+  heartSecondary,
+  quizDemo,
+  gmail,
+  whatsapp,
+  facebook,
+  linkedIn,
+  heartPink,
   aboutUsImage,
 };

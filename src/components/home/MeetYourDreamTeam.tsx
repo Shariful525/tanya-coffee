@@ -1,12 +1,20 @@
 import React from "react";
 import PartnerCard from "../cards/PartnerCard";
 import { teamMembersData } from "@/constants/teamMembersData";
+import InnerShadow from "../ui/InnerShadow";
 
 const MeetYourDreamTeam = () => {
   return (
     <div className="space-y-3.5 max-w-[470px] mx-auto">
+      <div className="flex flex-col items-center gap-y-5 mx-auto text-center">
+        <InnerShadow text="Meet Your Dream Team" />
+        <strong className="text-black font-bold text-2xl">
+          Lots Of Talent
+          <br /> (& Even More Passion)
+        </strong>
+      </div>
       {teamMembersData?.map((data, i) => (
-        <PartnerCard key={i} />
+        <PartnerCard data={data} key={i} />
       ))}
     </div>
   );
