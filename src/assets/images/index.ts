@@ -7,6 +7,12 @@ import whatsapp from "@/assets/images/whatsapp.png";
 import facebook from "@/assets/images/facebook.png";
 import linkedIn from "@/assets/images/linkedinIcon.png";
 import heartPink from "@/assets/images/heartPink.png";
+import aboutUsImage from "@/assets/images/about-us-image.png";
+import bransonImage from "@/assets/images/richardBranson.png";
+import successMedal from "@/assets/images/successRateImage.png";
+import modal from "@/assets/images/client.png";
+import zigzagLine from "@/assets/images/zigzagLine.png";
+
 export const assets = {
   coffeeCup,
   contactPhoto,
@@ -17,4 +23,9 @@ export const assets = {
   facebook,
   linkedIn,
   heartPink,
+  aboutUsImage,
+  bransonImage,
+  successMedal,
+  modal,
+  zigzagLine,
 };
