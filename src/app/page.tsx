@@ -7,11 +7,14 @@ import MeetYourDreamTeam from "@/components/home/MeetYourDreamTeam";
 import Hero from "@/components/home/Hero";
 import ContactForCoffee from "@/components/home/ContactForCoffee";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import AboutUs from "@/components/home/AboutUs";
+import OurWork from "@/components/home/OurWork";
 
 const Home = () => {
   return (
     <div className="space-y-5 px-3.5">
       <Hero />
+      <AboutUs />
       <AdvertisementAndMarketing className="max-w-[470px] mx-auto my-10" />
       <TopCountries />
       <BelovedClients className="max-w-[470px] mx-auto my-10" />
@@ -20,6 +23,7 @@ const Home = () => {
       <TopCountries />
       <BelovedClients />
       <ContactForCoffee />
+      <OurWork />
       <WhyChooseUs />
     </div>
   );

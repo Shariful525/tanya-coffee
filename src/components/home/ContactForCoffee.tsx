@@ -6,6 +6,7 @@ import CustomInput from "../shared/CustomInput";
 import Image from "next/image";
 import { assets } from "@/assets/images";
 import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
+import CustomTextarea from "../shared/CustomTextArea";
 
 const services = [
   "Advertising",
@@ -119,13 +120,12 @@ const ContactForCoffee = () => {
         </div>
 
         {/* Textarea handled through CustomInput */}
-        <CustomInput
+        <CustomTextarea
           label="Your Message To Us"
           name="message"
           value={formData.message}
           onChange={handleChange}
           placeholder="Message us & say hello. We would love to hear from you 😍"
-          type="textarea"
         />
 
         <CustomCheckbox

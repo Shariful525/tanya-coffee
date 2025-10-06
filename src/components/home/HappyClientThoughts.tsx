@@ -2,12 +2,16 @@ import { happyClientsData } from "@/constants/happyClientsData";
 import React from "react";
 import HappyClientsCard from "../cards/HappyClientsCard";
 import InnerShadow from "../ui/InnerShadow";
+import { IconPointFilled } from "@tabler/icons-react";
 
 const HappyClientThoughts = () => {
   return (
     <div className="space-y-5 max-w-[470px] mx-auto">
       <div className="flex flex-col items-center gap-y-[30px] max-w-[215px] mx-auto">
-        <InnerShadow text="Our Happy Clients" />
+        <InnerShadow
+          icon={<IconPointFilled className="text-primary" />}
+          text="Our Happy Clients"
+        />
         <strong className="text-center font-bold text-2xl">
           What Our Clients
           <br /> Say About Us

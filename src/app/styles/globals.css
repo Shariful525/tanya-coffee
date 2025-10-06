@@ -22,7 +22,7 @@
 }
 
 @theme inline {
-  --color-bg: var(--background);
+  --color-bg: var(--bg);
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
   --color-primary-60: var(--primary-60);
