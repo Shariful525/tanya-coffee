@@ -37,10 +37,15 @@ const PartnerCard = ({ data }: { data?: ITeamMember }) => {
           <p className="text-primary font-bold text-lg">{review?.brandName}</p>
         </div>
         <div className="flex flex-col items-center gap-y-5 text-center">
-          <p className="text-base text-black-80">{review?.firstComment}</p>
+          <p className="text-base text-black-80">“{review?.firstComment}</p>
           <p className="text-base text-black-80">{review?.secondComment}</p>
-          <p className="text-base text-black-80">{review?.thirdComment}”</p>
-          <p className="text-base text-black-80">{review?.fourthComment}</p>
+          <p className="text-base text-black-80">
+            {review?.thirdComment}
+            {review?.fourthComment ? "" : "”"}
+          </p>
+          {review?.fourthComment ? (
+            <p className="text-base text-black-80">{review?.fourthComment}</p>
+          ) : null}
         </div>
         <div className="border-t border-black-10 pt-4 space-y-2.5">
           <div className="flex flex-col items-center">

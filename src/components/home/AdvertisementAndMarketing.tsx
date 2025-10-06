@@ -32,7 +32,6 @@ const AdvertisementAndMarketing = ({ className }: { className?: string }) => {
           [@media(min-width:400px)]:grid-cols-2 
           md:grid-cols-3 
           gap-5
-          px-5 md:px-0
         "
       >
         {advertisingAndMarketing?.map((data: IMarketing, idx: number) => (

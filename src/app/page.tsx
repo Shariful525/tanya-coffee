@@ -10,11 +10,10 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 import AboutUs from "@/components/home/AboutUs";
 import OurWork from "@/components/home/OurWork";
 import WorkPhilosophy from "@/components/home/WorkPhilosophy";
-import WorkSummary from "@/components/home/WorkSummary";
 
 const Home = () => {
   return (
-    <div className="space-y-5 px-3.5">
+    <div>
       <Hero />
       <AboutUs />
       <AdvertisementAndMarketing className="max-w-[470px] mx-auto my-10" />
@@ -22,7 +21,6 @@ const Home = () => {
       <TopCountries />
       <BelovedClients className="max-w-[470px] mx-auto my-10" />
       <HappyClientThoughts />
-      <WorkSummary />
       <MeetYourDreamTeam />
       <TopCountries />
       <BelovedClients />
