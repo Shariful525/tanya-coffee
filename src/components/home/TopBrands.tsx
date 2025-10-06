@@ -45,7 +45,7 @@ const TopBrands = ({ classNmae }: { classNmae?: string }) => {
   ];
   return (
     <div className={classNmae}>
-      <h6 className="font-medium text-xl [@media(min-width:400px)]:text-2xl text-center mb-[30px]">
+      <h6 className="font-medium text-xl [@media(min-width:400px)]:text-2xl text-center mb-[30px] px-5">
         Brands who trust us with their advertising,{" "}
         <b className="text-primary uppercase">marketing</b>, Web Design &
         Development, event <b className="text-primary uppercase">management</b>{" "}
