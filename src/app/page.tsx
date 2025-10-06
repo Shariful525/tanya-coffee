@@ -8,15 +8,19 @@ import TopCountries from "@/components/home/TopCountries";
 import React from "react";
 import HappyClientThoughts from "@/components/home/HappyClientThoughts";
 import MeetYourDreamTeam from "@/components/home/MeetYourDreamTeam";
+import ContactForCoffee from "@/components/home/ContactForCoffee";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
 
 const Home = () => {
   return (
-    <div>
+    <div className="space-y-5">
       <AdvertisementAndMarketing />
-      <TopCountries />
-      <BelovedClients />
       <HappyClientThoughts />
       <MeetYourDreamTeam />
+      <TopCountries />
+      <BelovedClients />
+      <ContactForCoffee />
+      <WhyChooseUs />
     </div>
   );
 };

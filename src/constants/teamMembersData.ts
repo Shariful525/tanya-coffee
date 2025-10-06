@@ -3,12 +3,12 @@ import { teamMembersAssets } from "@/assets/team-members-assets";
 export const teamMembersData = [
   {
     _id: 1,
-    fullName: "Tanya Hyacinth D&apos;Silva-Fernandez",
+    fullName: "<p>Tanya Hyacinth<br /> D'Silva-Fernandez</p>",
     role: "Vice President ",
-    profilePhoto: teamMembersAssets.vicePresident,
+    profilePhoto: teamMembersAssets.vicePresident.src,
     personReviews: [
       {
-        brandLogo: teamMembersAssets?.msixAndPartners,
+        brandLogo: teamMembersAssets?.msixAndPartners.src,
         brandName: "MSix & Partners",
         firstComment:
           "12 years of us working together, you are one of the very few media partners I know who puts client's advertising objectives ahead of selling products – making you one of the few partners we trust.",
@@ -26,10 +26,10 @@ export const teamMembersData = [
     _id: 2,
     fullName: "Mazin Ameen Siraj",
     role: "Associate Advertising Director",
-    profilePhoto: teamMembersAssets.mazin,
+    profilePhoto: teamMembersAssets.mazin.src,
     personReviews: [
       {
-        brandLogo: teamMembersAssets?.singaporeLogo,
+        brandLogo: teamMembersAssets?.singaporeLogo.src,
         brandName: "Singapore Tourism Board",
         firstComment:
           "Mazin was always one of the best stakeholders to work with.",
@@ -47,10 +47,10 @@ export const teamMembersData = [
     _id: 3,
     fullName: "Ron Vincent Joseph",
     role: "Associate Director, Website Design & Development",
-    profilePhoto: teamMembersAssets.ron,
+    profilePhoto: teamMembersAssets.ron.src,
     personReviews: [
       {
-        brandLogo: teamMembersAssets?.standAeroSpace,
+        brandLogo: teamMembersAssets?.standAeroSpace.src,
         brandName: "Strand Aerospace",
         firstComment:
           "Ron served as Head of IT at Strand Aerospace Malaysia. I witnessed firsthand his remarkable leadership, technical expertise & unwavering dedication.",
