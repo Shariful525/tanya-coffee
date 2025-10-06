@@ -42,9 +42,9 @@ const CLIENT_LOGOS = [
   { id: 17, image: clientLogo17.src },
 ];
 
-const BelovedClients = () => {
+const BelovedClients = ({ className }: { className?: string }) => {
   return (
-    <div className="py-10 max-w-[470px] mx-auto">
+    <div className={`${className}`}>
       <h6 className="font-bold text-xl [@media(min-width:400px)]:text-2xl text-center mb-8">
         Some Of Our <br />
         <b className="text-primary uppercase">Beloved</b> Clients
@@ -57,7 +57,7 @@ const BelovedClients = () => {
           [@media(min-width:400px)]:grid-cols-2 
           md:grid-cols-3 
           lg:grid-cols-4 
-          gap-5
+          gap-5 px-5 md:px-0
         "
       >
         {CLIENT_LOGOS.map((logo) => (

@@ -8,13 +8,16 @@ import TopCountries from "@/components/home/TopCountries";
 import React from "react";
 import HappyClientThoughts from "@/components/home/HappyClientThoughts";
 import MeetYourDreamTeam from "@/components/home/MeetYourDreamTeam";
+import TopBrands from "@/components/home/TopBrands";
+import Hero from "@/components/home/Hero";
 
 const Home = () => {
   return (
     <div>
-      <AdvertisementAndMarketing />
+      <Hero />
+      <AdvertisementAndMarketing className="max-w-[470px] mx-auto my-10" />
       <TopCountries />
-      <BelovedClients />
+      <BelovedClients className="max-w-[470px] mx-auto my-10" />
       <HappyClientThoughts />
       <MeetYourDreamTeam />
     </div>

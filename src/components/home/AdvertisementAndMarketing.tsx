@@ -3,12 +3,17 @@ import React from "react";
 import MarketingAndAdvertiseCard from "../cards/MarketingAndAdvertiseCard";
 import { IMarketing } from "@/interfaces/advertiseAndMarketing.interface";
 import InnerShadow from "../ui/InnerShadow";
+import { IconPointFilled } from "@tabler/icons-react";
 
-const AdvertisementAndMarketing = () => {
+const AdvertisementAndMarketing = ({ className }: { className?: string }) => {
   return (
-    <div className="max-w-[470px] mx-auto">
+    <div className={`${className}`}>
       <div className="flex flex-col gap-y-5 mb-5">
-        <InnerShadow text="SERVICES" className="mx-auto" />
+        <InnerShadow
+          text="SERVICES"
+          className="mx-auto"
+          icon={<IconPointFilled className="fill-primary" />}
+        />
         <h5 className="font-bold text-xl [@media(min-width:400px)]:text-2xl text-center max-w-[90%] mx-auto">
           ADVERTISING, MARKETING, WEBSITE DESIGN & DEVELOPMENT, EVENT MANAGEMENT
           & MORE <strong className="text-primary">SERVICES</strong>
@@ -27,6 +32,7 @@ const AdvertisementAndMarketing = () => {
           [@media(min-width:400px)]:grid-cols-2 
           md:grid-cols-3 
           gap-5
+          px-5 md:px-0
         "
       >
         {advertisingAndMarketing?.map((data: IMarketing, idx: number) => (

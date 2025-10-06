@@ -26,7 +26,7 @@ const TopCountries = () => {
           grid-cols-1 
           [@media(min-width:400px)]:grid-cols-2 
           md:grid-cols-3 
-          gap-5 mt-5"
+          gap-5 mt-5 px-5 md:px-0"
       >
         {COUNTRIES?.map((country: ICountry, idx: number) => (
           <CountryCard key={idx} country={country} variant="v1" />
