@@ -17,10 +17,11 @@ const ClickForCoffeeButton = ({
   handleClick?: () => void;
 }) => {
   return (
-    <div
+    <button
       onClick={handleClick}
+      type="submit"
       role="button"
-      className={`cursor-pointer bg-secondary text-white flex items-center rounded-full relative ${className}`}
+      className={`cursor-pointer  bg-secondary text-white flex items-center rounded-full relative ${className}`}
     >
       <div className={`${imageClassName} relative -mt-6`}>
         <Image src={assets.coffeeCup} alt="Coffee Cup" />
@@ -28,7 +29,7 @@ const ClickForCoffeeButton = ({
       <p className={`${textClassName} select-none`}>
         {text} For <TextPlayball>Coffee</TextPlayball>
       </p>
-    </div>
+    </button>
   );
 };
 

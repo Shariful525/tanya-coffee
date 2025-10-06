@@ -7,6 +7,7 @@ import Image from "next/image";
 import { assets } from "@/assets/images";
 import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
 import CustomTextarea from "../shared/CustomTextArea";
+import { PhoneNumberInput } from "../shared/PhoneInput";
 
 const services = [
   "Advertising",
@@ -50,6 +51,10 @@ const ContactForCoffee = () => {
     setFormData((prev) => ({ ...prev, [name]: checked }));
   };
 
+  const handlePhoneChange = (value: string) => {
+    setFormData((prev) => ({ ...prev, phone: value }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Submitted Data:", formData);
@@ -58,7 +63,7 @@ const ContactForCoffee = () => {
   return (
     <div className="bg-primary rounded-[20px] p-5">
       <Image src={assets.contactPhoto} alt="" className="px-4" />
-      <form onSubmit={handleSubmit} className="text-white space-y-4">
+      <form className="text-white space-y-4">
         <CustomInput
           label="Your Full Name"
           name="fullName"
@@ -68,14 +73,10 @@ const ContactForCoffee = () => {
           required
         />
 
-        <CustomInput
-          label="Your Mobile Phone Number"
-          name="phone"
-          type="tel"
+        <PhoneNumberInput
+          label="Phone Number"
           value={formData.phone}
-          onChange={handleChange}
-          placeholder="+60 133416060"
-          required
+          onChange={handlePhoneChange}
         />
 
         <CustomInput
@@ -119,7 +120,6 @@ const ContactForCoffee = () => {
           />
         </div>
 
-        {/* Textarea handled through CustomInput */}
         <CustomTextarea
           label="Your Message To Us"
           name="message"
@@ -142,7 +142,10 @@ const ContactForCoffee = () => {
           onChange={(checked) => handleCheckboxChange("monthlyTips", checked)}
         />
 
-        <ClickForCoffeeButton text="Submit" className="justify-center py-2" />
+        <ClickForCoffeeButton
+          text="Submit"
+          className="justify-center py-2 w-full"
+        />
       </form>
     </div>
   );
