@@ -1,13 +1,41 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --bg: #f4f4f4;
+  --primary: #0074db;
+  --primary-light: #dbf1ff;
+  --primary-60: #01519899;
+  --secondary: #eaaa01;
+  --black: #000000;
+  --black-10: #e6e6e6;
+  --black-15: #ffffff26;
+  --black-30: #0000004d;
+  --black-50: #7f7f7f;
+  --black-70: #4c4c4c;
+  --black-80: #333333;
+  --white: #ffffff;
+  --spring-green: #58b47d;
+  --spring-green-light: #edffdb;
+  --pink-light: #ffdbf5;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--background);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-60: var(--primary-60);
+  --color-secondary: var(--secondary);
+  --color-black: var(--black);
+  --color-black-10: var(--black-10);
+  --color-black-15: var(--black-15);
+  --color-black-30: var(--black-30);
+  --color-black-50: var(--black-50);
+  --color-black-70: var(--black-70);
+  --color-black-80: var(--black-80);
+  --color-white: var(--white);
+  --color-spring-green: var(--spring-green);
+  --color-spring-green-light: var(--spring-green-light);
+  --color-pink-light: var(--pink-light);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -18,7 +46,43 @@
 } */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
+@layer components {
+  /* hide horizontal scrollbar */
+  .scrollbar-x-remove::-webkit-scrollbar:horizontal {
+    @apply hidden;
+  }
+
+  /* hide vertical scrollbar */
+  .scrollbar-y-remove::-webkit-scrollbar:vertical {
+    @apply hidden;
+  }
+
+  /* hide both (shortcut) */
+  .scrollbar-remove::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .scrollbar-remove {
+    scrollbar-width: none; /* Firefox */
+  }
+  img {
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+  }
 }
