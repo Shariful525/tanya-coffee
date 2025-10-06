@@ -5,7 +5,7 @@ import InnerShadow from "../ui/InnerShadow";
 
 const HappyClientThoughts = () => {
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 max-w-[470px] mx-auto">
       <div className="flex flex-col items-center gap-y-[30px] max-w-[215px] mx-auto">
         <InnerShadow text="Our Happy Clients" />
         <strong className="text-center font-bold text-2xl">

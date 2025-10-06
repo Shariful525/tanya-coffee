@@ -21,7 +21,7 @@ const HappyClientsCard = ({
 }) => {
   return (
     <div
-      className={`${className} rounded-[20px] p-5 w-full space-y-[30px] bg-white shadow-[rgba(0,0,0,0.2)_0px_20px_30px] max-w-96`}
+      className={`${className} rounded-[20px] p-5 w-full space-y-[30px] bg-white shadow-[rgba(0,0,0,0.2)_0px_20px_30px]`}
     >
       <div className="border border-black-10 rounded-[10px] max-w-[180px] mx-auto flex items-center justify-center py-6">
         <div className="relative w-[105px] h-[30px] ">
