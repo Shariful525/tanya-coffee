@@ -5,19 +5,16 @@ import { happyClientsData } from "@/constants/happyClientsData";
 import AdvertisementAndMarketing from "@/components/home/AdvertisementAndMarketing";
 import TopCountries from "@/components/home/TopCountries";
 import React from "react";
+import HappyClientThoughts from "@/components/home/HappyClientThoughts";
+import MeetYourDreamTeam from "@/components/home/MeetYourDreamTeam";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center gap-5 justify-center px-5">
-      <InnerShadow />
-      <ClickForCoffeeButton />
-      {happyClientsData?.map((data, i) => (
-        <HappyClientsCard data={data} key={i} />
-      ))}
-      <div>
-        <AdvertisementAndMarketing />
-        <TopCountries />
-      </div>
+    <div className="flex flex-col items-center gap-5 justify-center  p-5">
+      <HappyClientThoughts />
+      <MeetYourDreamTeam />
+      <AdvertisementAndMarketing />
+      <TopCountries />
     </div>
   );
 };
