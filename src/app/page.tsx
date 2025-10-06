@@ -13,8 +13,9 @@ import WorkPhilosophy from "@/components/home/WorkPhilosophy";
 
 const Home = () => {
   return (
-    <div className="space-y-5 px-3.5">
+    <div>
       <Hero />
+<<<<<<< HEAD
       <AboutUs />
       <AdvertisementAndMarketing className="max-w-[470px] mx-auto my-10" />
       <WorkPhilosophy />
@@ -27,6 +28,23 @@ const Home = () => {
       <ContactForCoffee />
       <OurWork />
       <WhyChooseUs />
+=======
+      <div className="space-y-5 px-5">
+        <AboutUs />
+        <AdvertisementAndMarketing className="max-w-[470px] mx-auto my-10" />
+        <WorkPhilosophy />
+        <TopCountries />
+        <BelovedClients className="max-w-[470px] mx-auto my-10" />
+        <HappyClientThoughts />
+        <WorkSummary />
+        <MeetYourDreamTeam />
+        <TopCountries />
+        <BelovedClients />
+        <ContactForCoffee />
+        <OurWork />
+        <WhyChooseUs />
+      </div>
+>>>>>>> 7a1b506087727f2b75da27a810c1a0838c57de97
     </div>
   );
 };
