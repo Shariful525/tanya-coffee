@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./styles/globals.css";
 import BottomMenuBar from "@/components/layout/BottomMenuBar";
+import Header from "@/components/layout/Header";
 
 const latoFont = Lato({
   variable: "--font-lato",
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${latoFont.variable} antialiased`}>
+        <Header />
         {children}
         <BottomMenuBar />
       </body>

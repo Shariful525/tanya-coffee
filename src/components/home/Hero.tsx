@@ -24,7 +24,10 @@ const Hero = () => {
         engage users. Delivering solutions that inspire, convert, and grow your
         business.
       </p>
-      <ClickForCoffeeButton className="max-w-[60%] mx-auto py-1" />
+      <ClickForCoffeeButton
+        textClassName="text-sm"
+        className="max-w-[60%] mx-auto justify-center py-3 px-5"
+      />
       <HeroVideoSection />
       <TopBrands classNmae="mt-5" />
     </div>
