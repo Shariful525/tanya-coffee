@@ -10,11 +10,13 @@ import HappyClientThoughts from "@/components/home/HappyClientThoughts";
 import MeetYourDreamTeam from "@/components/home/MeetYourDreamTeam";
 import TopBrands from "@/components/home/TopBrands";
 import Hero from "@/components/home/Hero";
+import AboutUs from "@/components/home/AboutUs";
 
 const Home = () => {
   return (
     <div>
       <Hero />
+      <AboutUs />
       <AdvertisementAndMarketing className="max-w-[470px] mx-auto my-10" />
       <TopCountries />
       <BelovedClients className="max-w-[470px] mx-auto my-10" />
