@@ -20,10 +20,10 @@ const AboutUs = () => {
         Our team is a mix of<span className="text-primary font-semibold"> DREAMERS</span> & <span>DOERS</span>, we <span>are MISFITS </span> for a cause & we are  <span>REBELS </span> for a cause when it comes to formulating <span>custom-made</span> advertising, marketing, website/mobile app design & development, event management & more wonders <span>FOR YOU</span>.
       </p>
 
-      <div className="relative max-w-md mx-auto bg-white rounded-[20px] p-8 text-center">
+      <div className="relative max-w-md mx-auto bg-white rounded-[20px] p-[clamp(20px,1.5vw,32px)] text-center">
 
-        <div className="absolute top-8 left-3 text-primary rotate-180">
-          <IconQuoteFilled size={48} stroke={1.5} />
+        <div className="absolute top-8 left-0 text-primary rotate-180">
+          <IconQuoteFilled className="" size={48} stroke={1.5} />
         </div>
 
         <p className="text-gray-700 text-lg leading-relaxed  p-5">
@@ -36,11 +36,11 @@ const AboutUs = () => {
           for ALL <span className="font-semibold text-primary uppercase">OF US</span>.
         </p>
 
-        <div className="absolute bottom-20 right-4 text-primary ">
+        <div className="absolute bottom-20 right-2 text-primary ">
           <IconQuoteFilled size={48} stroke={2} />
         </div>
 
-        <p className="mt-5 text-2xl text-gray-800  font-[GreatVibes]">
+        <p className="mt-5 text-[clamp(18px,1vw,24px)] text-gray-800  font-[GreatVibes]">
           – Tanya Hyacinth D’Silva–Fernandez –
         </p>
 
@@ -50,8 +50,8 @@ const AboutUs = () => {
       <p className="text-center">We have been catering to an array of clients from <span className="text-primary font-semibold uppercase"> LOCAL STARTUPS TO GLOBAL FORTUNE 500 COMPANIES</span> & we have achieved measurable success for our clients <span className="font-semibold text-primary uppercase"> IN OVER 150 COUNTRIES</span>. Our formula is equal parts experience, historical data, strategy, creativity, hard work, heart work, & a sprinkle of magic fairy dust.</p>
       <div>
         <p className="text-center">Let’s create something great, <span className="text-primary font-semibold uppercase">TOGETHER</span>.</p>
-        <div className="mt-[30px]">
-          <ClickForCoffeeButton />
+        <div className="mt-[clamp(20px,4vw,40px)]  ">
+          <ClickForCoffeeButton className="" />
         </div>
       </div>
     </div>

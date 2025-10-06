@@ -8,6 +8,8 @@ import Hero from "@/components/home/Hero";
 import AboutUs from "@/components/home/AboutUs";
 import ContactForCoffee from "@/components/home/ContactForCoffee";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import WorkPhilosophy from "@/components/home/WorkPhilosophy";
+import WorkSummary from "@/components/home/WorkSummary";
 
 const Home = () => {
   return (
@@ -15,9 +17,11 @@ const Home = () => {
       <Hero />
       <AboutUs />
       <AdvertisementAndMarketing className="max-w-[470px] mx-auto my-10" />
+      <WorkPhilosophy />
       <TopCountries />
       <BelovedClients className="max-w-[470px] mx-auto my-10" />
       <HappyClientThoughts />
+      <WorkSummary />
       <MeetYourDreamTeam />
       <TopCountries />
       <BelovedClients />
