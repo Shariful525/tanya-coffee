@@ -12,12 +12,16 @@ const CountryCard = ({
   if (variant === "v1") {
     return (
       <div className="bg-white rounded-2xl p-5 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-shadow duration-300">
-        <div className="mb-1">
+        <div
+          className="mb-1 relative w-[50px] h-[50px] 
+          [@media(min-width:400px)]:w-[60px]
+          [@media(min-width:400px)]:h-[60px]"
+        >
           <Image
             src={country.image}
             alt={country.name}
-            width={80}
-            height={80}
+            fill
+            className="inset-0"
           />
         </div>
         <h3 className="text-base [@media(min-width:400px)]:text-lg font-semibold text-primary uppercase">
@@ -31,13 +35,16 @@ const CountryCard = ({
   // #> Variant 2: Left image → right content
   return (
     <div className="bg-white rounded-xl p-5 flex items-center gap-4 shadow-sm hover:shadow-lg transition-shadow duration-300">
-      <div className="flex-shrink-0">
+      <div
+        className="mb-1 relative w-[50px] h-[50px] 
+          [@media(min-width:400px)]:w-[60px]
+          [@media(min-width:400px)]:h-[60px]"
+      >
         <Image
           src={country.image}
           alt={country.name}
-          width={60}
-          height={60}
-          className="rounded-lg"
+          fill
+          className="inset-0"
         />
       </div>
       <div>

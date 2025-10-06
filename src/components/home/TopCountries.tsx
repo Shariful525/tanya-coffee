@@ -4,6 +4,7 @@ import React from "react";
 import sectionThumbnail from "../../assets/country-flag/section-thumbnail.png";
 import { COUNTRIES } from "@/constants/country.constant";
 import CountryCard from "../cards/CountryCard";
+import { ICountry } from "@/interfaces/country.interface";
 
 const TopCountries = () => {
   return (
@@ -20,9 +21,15 @@ const TopCountries = () => {
         Our Offices
       </h6>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-5">
-        {COUNTRIES?.map((country) => (
-          <CountryCard key={country.name} country={country} variant="v1" />
+      <div
+        className="grid 
+          grid-cols-1 
+          [@media(min-width:400px)]:grid-cols-2 
+          md:grid-cols-3 
+          gap-5 mt-5"
+      >
+        {COUNTRIES?.map((country: ICountry, idx: number) => (
+          <CountryCard key={idx} country={country} variant="v1" />
         ))}
       </div>
     </section>
