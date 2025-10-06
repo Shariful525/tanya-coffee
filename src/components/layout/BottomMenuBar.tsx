@@ -25,7 +25,7 @@ const BottomMenuBar = () => {
           rounded-full
           border border-white
           px-3 py-2
-          w-[90vw] max-w-md
+          w-[90vw] max-w-[470px]
         "
       >
         {menus.map((menu) => {

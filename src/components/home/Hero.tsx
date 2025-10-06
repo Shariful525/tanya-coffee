@@ -1,0 +1,34 @@
+import React from "react";
+import TopBrands from "./TopBrands";
+import InnerShadow from "../ui/InnerShadow";
+import { IconPointFilled } from "@tabler/icons-react";
+import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
+import HeroVideoSection from "./HeroVideoSection";
+
+const Hero = () => {
+  return (
+    <div className="max-w-[470px] mx-auto mb-5 bg-gradient-to-b from-[#C9E6FF] to-white py-[30px] px-5">
+      <InnerShadow
+        text="Dwaandmore"
+        className="mx-auto"
+        icon={<IconPointFilled className="fill-primary" />}
+      />
+      <h2 className="text-center text-2xl [@media(min-width:400px)]:text-3xl font-bold mt-2 mb-3">
+        <b className="italic text-secondary">Every idea</b>, Every Need <br />{" "}
+        Right Here, Ready <b className="italic text-secondary">To Rock!</b>
+      </h2>
+      <p className="text-black-70 text-center text-base mb-5">
+        We help brands turn bold ideas into{" "}
+        <b className="text-primary ">powerful</b> experiences
+        for your customers. From strategy to design, every detail is crafted to
+        engage users. Delivering solutions that inspire, convert, and grow your
+        business.
+      </p>
+      <ClickForCoffeeButton className="max-w-[60%] mx-auto py-1" />
+      <HeroVideoSection />
+      <TopBrands classNmae="mt-5" />
+    </div>
+  );
+};
+
+export default Hero;

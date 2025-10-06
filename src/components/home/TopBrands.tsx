@@ -1,0 +1,75 @@
+import clientsLogo from "@/assets/clients-logo";
+import React from "react";
+import InfiniteSlider from "../shared/InfiniteSlider";
+import Image from "next/image";
+
+const TopBrands = ({ classNmae }: { classNmae?: string }) => {
+  const {
+    clientLogo1,
+    clientLogo10,
+    clientLogo11,
+    clientLogo12,
+    clientLogo13,
+    clientLogo14,
+    clientLogo15,
+    clientLogo16,
+    clientLogo17,
+    clientLogo2,
+    clientLogo3,
+    clientLogo4,
+    clientLogo5,
+    clientLogo6,
+    clientLogo7,
+    clientLogo8,
+    clientLogo9,
+  } = clientsLogo;
+
+  const brandImages = [
+    clientLogo1,
+    clientLogo10,
+    clientLogo11,
+    clientLogo12,
+    clientLogo13,
+    clientLogo14,
+    clientLogo15,
+    clientLogo16,
+    clientLogo17,
+    clientLogo2,
+    clientLogo3,
+    clientLogo4,
+    clientLogo5,
+    clientLogo6,
+    clientLogo7,
+    clientLogo8,
+    clientLogo9,
+  ];
+  return (
+    <div className={classNmae}>
+      <h6 className="font-medium text-xl [@media(min-width:400px)]:text-2xl text-center mb-[30px]">
+        Brands who trust us with their advertising,{" "}
+        <b className="text-primary uppercase">marketing</b>, Web Design &
+        Development, event <b className="text-primary uppercase">management</b>{" "}
+        & <b className="text-primary uppercase">more</b>.
+      </h6>
+      <InfiniteSlider speed={1} animationDirection="right" hasShadow>
+        <div className="flex gap-[clamp(12px,2.5vw,20px)] w-max whitespace-nowrap">
+          {brandImages?.concat(brandImages)?.map((logo, index) => (
+            <div
+              key={index}
+              className="relative h-[60px] w-[180px] mx-2 shrink-0"
+            >
+              <Image
+                src={logo || "brand.png"}
+                alt={"Brand Photo - Expert Squad"}
+                fill
+                className="object-cover rounded-lg"
+              />
+            </div>
+          ))}
+        </div>
+      </InfiniteSlider>
+    </div>
+  );
+};
+
+export default TopBrands;
