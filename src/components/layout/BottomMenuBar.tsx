@@ -24,8 +24,9 @@ const BottomMenuBar = () => {
           shadow-lg
           rounded-full
           border border-white
-          px-3 py-2
-          w-[90vw] max-w-[470px]
+          px-2
+          py-2
+          w-[95vw] max-w-[470px]
         "
       >
         {menus.map((menu) => {
@@ -35,7 +36,7 @@ const BottomMenuBar = () => {
               key={menu.id}
               onClick={() => setActive(menu.id)}
               className={`
-                flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-300
+                flex items-center justify-center gap-2 px-3 py-2 rounded-full transition-all duration-300
                 ${
                   isActive
                     ? "bg-blue-600 text-white shadow-md"
@@ -43,7 +44,7 @@ const BottomMenuBar = () => {
                 }
               `}
             >
-              <div className="relative w-8 h-8">
+              <div className="relative w-[clamp(18px,3.5vw,25px)] h-[clamp(20px,3.5vw,30px)]">
                 <Image
                   src={menu.icon}
                   alt={menu.label}
@@ -53,7 +54,7 @@ const BottomMenuBar = () => {
                   } transition-all duration-300`}
                 />
               </div>
-              <span className="font-medium text-sm">{menu.label}</span>
+              <span className="font-medium whitespace-nowrap text-[clamp(12px,3.5vw,16px)]">{menu.label}</span>
             </button>
           );
         })}
