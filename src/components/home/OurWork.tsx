@@ -4,6 +4,7 @@ import ProjectDetailsCard from "../cards/ProjectDetailsCard";
 import Image from "next/image";
 import { assets } from "@/assets/images";
 import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
+import TextPlayball from "../shared/TextPlayball";
 
 const OurWork = () => {
   return (
@@ -32,8 +33,8 @@ const OurWork = () => {
           <div className=" mx-auto my-4 w-[250px]">
             <Image src={assets.zigzagLine} alt="" width={250} height={20} />
           </div>
-          <p className=" text-gray-700 text-xl font-['Dancing_Script',_cursive]">
-            - Tanya Hyacinth D' Silva-Fernandez -
+          <p className=" text-gray-700 text-xl ">
+            <TextPlayball>- Tanya Hyacinth D' Silva-Fernandez -</TextPlayball>
           </p>
         </div>
       </div>

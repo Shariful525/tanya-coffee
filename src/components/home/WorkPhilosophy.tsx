@@ -33,11 +33,9 @@ const WorkPhilosophy = () => {
               </span>
             </p>
 
-            <TextPlayball>
-              <p className="mt-6 text-white text-xl font-['Dancing_Script',_cursive]">
-                &mdash; Richard Branson &mdash;
-              </p>
-            </TextPlayball>
+            <p className="mt-6 text-white text-xl ">
+              <TextPlayball>&mdash; Richard Branson &mdash;</TextPlayball>
+            </p>
           </div>
         </div>
 
