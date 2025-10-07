@@ -6,6 +6,8 @@ import kementerianLogo from "@/assets/projects-assets/kementerianLogo.png";
 import talentCorpFirstImage from "@/assets/projects-assets/tyonderFirstProject.png";
 import tyonderProjectImage from "@/assets/projects-assets/tyondersecondProjectfirstImage.png";
 import mercyThirdImg from "@/assets/projects-assets/mercyProjectImg3.png";
+import yonderMusicLogo from "@/assets/projects-assets/yonderMusicLogo.png";
+import celcomLogo from "@/assets/projects-assets/celcomLogo.png";
 
 export const projectAssets = {
   mercyLogo,
@@ -16,4 +18,6 @@ export const projectAssets = {
   kementerianLogo,
   talentCorpFirstImage,
   tyonderProjectImage,
+  yonderMusicLogo,
+  celcomLogo,
 };

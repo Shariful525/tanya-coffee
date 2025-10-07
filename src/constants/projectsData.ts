@@ -51,8 +51,8 @@ export const projectsData: IProject[] = [
   },
   {
     clientLogos: [
-      projectAssets.talenCorpLogo.src,
-      projectAssets?.kementerianLogo.src,
+      projectAssets.yonderMusicLogo.src,
+      projectAssets?.celcomLogo.src,
     ],
     client: "Mercy Malaysia Non-Profit Organisation",
     campaign: "Nepal Earthquake Donation Drive",
