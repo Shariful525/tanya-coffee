@@ -46,6 +46,11 @@ body {
   background: var(--bg);
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 ::-webkit-scrollbar {
   @apply w-1;
 }
