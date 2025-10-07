@@ -42,7 +42,7 @@ const WorkPhilosophy = () => {
         </div>
 
         <div className="text-center space-y-5">
-          <h2 className="text-[24px]     ">
+          <h2 className="text-2xl font-bold max-w-[85%] mx-auto">
             Why <span className="text-primary">WE LOVE</span> What We Do & Why{" "}
             <span className="text-primary">YOU SHOULD TOO</span>
           </h2>

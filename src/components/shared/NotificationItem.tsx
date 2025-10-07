@@ -22,7 +22,7 @@ const NotificationItem = ({
         />
       </div>
       <div className="">
-        <p className="text-black-80 font-bold text-lg leading-5 line-clamp-2">
+        <p className="text-black-70 font-bold text-base leading-5 line-clamp-2">
           {messege}
         </p>
         <small className="text-black-70 text-sm">{date}</small>
