@@ -13,7 +13,7 @@ const Header = () => {
             <Image src={logo} alt="Logo | Advertising Works & More" />
           </Link>
           <ClickForCoffeeButton
-            className="justify-center py-3 px-5"
+            className="justify-center py-2 pl-2.5 pr-3.5"
             textClassName="text-sm"
           />
         </div>

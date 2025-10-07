@@ -144,7 +144,9 @@ const ContactForCoffee = () => {
 
         <ClickForCoffeeButton
           text="Submit"
-          className="justify-center py-2 w-full"
+          className="justify-center py-3 w-full"
+          textClassName="text-lg"
+          imageClassName="w-[66px] h-[50px] "
         />
       </form>
     </div>

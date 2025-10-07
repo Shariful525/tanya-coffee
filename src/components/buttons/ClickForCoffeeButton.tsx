@@ -24,7 +24,12 @@ const ClickForCoffeeButton = ({
       className={`cursor-pointer  bg-secondary text-white flex items-center rounded-full relative ${className}`}
     >
       <div className={`${imageClassName} relative -mt-6`}>
-        <Image src={assets.coffeeCup} alt="Coffee Cup" />
+        <Image
+          src={assets.coffeeCup}
+          alt="Coffee Cup"
+          fill
+          className="object-contain inset-0 w-full h-full"
+        />
       </div>
       <p className={`${textClassName} select-none`}>
         {text} For <TextPlayball>Coffee</TextPlayball>
