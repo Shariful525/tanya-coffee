@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
       </div>
 
       <div className="space-y-5 border-t border-black-10 pt-5">
-        <p className="uppercase font-bold text-black-80">
+        <p className="uppercase text-base font-bold text-black-80">
           Weekly quizzes for you:
         </p>
         <NotificationItem photo={assets.quizDemo} />
@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
         <NotificationItem photo={assets.quiz3} />
       </div>
       <div className="space-y-5 border-t border-b border-black-10 py-5">
-        <p className="uppercase font-bold text-black-80">
+        <p className="uppercase font-bold text-base text-black-80">
           WEEKLY ARTICLES FOR YOU:
         </p>
         <NotificationItem photo={assets.article1} />
@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
 
       <div className="space-y-5">
         <div className="flex flex-col">
-          <span className="uppercase font-bold leading-4 text-lg">
+          <span className="uppercase font-bold leading-4 text-lg text-black-80">
             Contact Us:
           </span>
           <span className="text-black-70 font-medium text-base">
@@ -51,18 +51,18 @@ const WhyChooseUs = () => {
           </span>
         </div>
         <div className="flex items-center gap-x-2.5">
-          <div className="border border-black-10 rounded-full flex items-center justify-center p-2 relative w-[50px] h-[50px] overflow-hidden">
+          <div className="border border-black-10 rounded-full flex items-center justify-center p-1.5 relative w-[40px] h-[40px] overflow-hidden">
             <Image src={assets.gmail} alt="gmail" />
           </div>
-          <p className="text-black-70 font-bold text-lg">
+          <p className="text-black-70 font-bold text-base">
             hello@dwaandmore.com
           </p>
         </div>
         <div className="flex items-center gap-x-2.5">
-          <div className="border border-black-10 rounded-full flex items-center justify-center  relative w-[50px] h-[50px] overflow-hidden shrink-0">
+          <div className="border border-black-10 rounded-full flex items-center justify-center  relative w-[40px] h-[40px] overflow-hidden shrink-0">
             <Image src={assets.whatsapp} alt="gmail" />
           </div>
-          <p className="text-black-70 font-bold text-lg">
+          <p className="text-black-70 font-bold text-base">
             Click to WhatsApp text message us ONLY. Thank youuuuuuuuuu!🙏
           </p>
         </div>
@@ -71,17 +71,17 @@ const WhyChooseUs = () => {
             Socials:
           </p>
           <div className="flex items-center gap-x-2.5">
-            <div className="border border-black-10 rounded-full flex items-center justify-center  relative w-[50px] h-[50px] overflow-hidden shrink-0">
+            <div className="border border-black-10 rounded-full flex items-center justify-center  relative w-[40px] h-[40px] overflow-hidden shrink-0">
               <Image src={assets.facebook} alt="gmail" />
             </div>
-            <div className="border border-black-10 rounded-full flex items-center justify-center  relative w-[50px] h-[50px] overflow-hidden shrink-0">
+            <div className="border border-black-10 rounded-full flex items-center justify-center  relative w-[40px] h-[40px] overflow-hidden shrink-0">
               <Image src={assets.linkedIn} alt="gmail" />
             </div>
           </div>
         </div>
       </div>
       <div className=" border border-black-10 rounded-lg py-3.5 px-6 -mb-12  bg-white">
-        <p className="flex items-center justify-center gap-x-1 text-black-80 font-semibold text-xs [@media(min-width:350px)]:text-[10px] whitespace-nowrap">
+        <p className="flex items-center justify-center gap-x-1 text-black-80 font-semibold text-sm [@media(min-width:350px)]:text-[12px] whitespace-nowrap">
           Designed & Developed with
           <Image src={assets.heartPink} width={30} alt="heart" />
           by AdvertisingWork & More
