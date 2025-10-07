@@ -49,11 +49,13 @@ const OurWork = () => {
         <div className="bg-white rounded-2xl  py-10">
           <h3 className="text-xl font-semibold text-primary mb-4">OUR WORK</h3>
           <div className="w-48 h-[250px] mx-auto relative">
-            <Image
-              src={assets.successMedal.src}
-              alt="100% Success Rate Medal"
-              layout="fill"
-              objectFit="contain"
+            <video
+              src="/assets/video/successratess.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover rounded-[20px]"
             />
           </div>
         </div>

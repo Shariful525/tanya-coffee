@@ -2,19 +2,27 @@ import { assets } from "@/assets/images";
 import Image from "next/image";
 import React from "react";
 import NotificationItem from "../shared/NotificationItem";
+import Link from "next/link";
 
 const WhyChooseUs = () => {
   return (
-    <div className="rounded-t-[20px] p-5 bg-[linear-gradient(180.26deg,_#C9E6FF_-1.01%,_#FFFFFF_99.78%)] space-y-5 mb-[110px]">
+    <div className="rounded-t-[20px] p-5 bg-[linear-gradient(180.26deg,_#C9E6FF_-1.01%,_#FFFFFF_99.78%)] space-y-5 mb-[110px] max-w-[470px] mx-auto">
       <div className="space-y-5  flex flex-col items-center text-center">
         <div className="font-bold text-black-80 text-2xl">
           <h2>Why Choose Us</h2>
           <span>Passionate</span>
         </div>
-        <div
-          className="bg-white rounded-[20px] w-full
-        h-[390px] "
-        ></div>
+        <div className="rounded-[20px] w-full h-[390px]">
+          <video
+            src="/assets/video/logo-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover rounded-[20px]"
+          />
+        </div>
+
         <div className="space-y-5 flex flex-col items-center">
           <p className="text-2xl font-bold text-black-80">
             <span className="text-secondary">SUCCESS</span> is when we make
@@ -54,29 +62,41 @@ const WhyChooseUs = () => {
           <div className="border border-black-10 rounded-full flex items-center justify-center p-1.5 relative w-[40px] h-[40px] overflow-hidden">
             <Image src={assets.gmail} alt="gmail" />
           </div>
-          <p className="text-black-70 font-bold text-base">
+          <Link
+            href="mailto:hello@dwaandmore.com"
+            className="text-black-70 font-bold text-base"
+          >
             hello@dwaandmore.com
-          </p>
+          </Link>
         </div>
         <div className="flex items-center gap-x-2.5">
           <div className="border border-black-10 rounded-full flex items-center justify-center  relative w-[40px] h-[40px] overflow-hidden shrink-0">
             <Image src={assets.whatsapp} alt="gmail" />
           </div>
-          <p className="text-black-70 font-bold text-base">
+          <Link
+            href="https://wa.me/60108008989?text=hello"
+            className="text-black-70 font-bold text-base"
+          >
             Click to WhatsApp text message us ONLY. Thank youuuuuuuuuu!🙏
-          </p>
+          </Link>
         </div>
         <div className="space-y-2.5">
           <p className="uppercase text-black-70 font-semibold text-lg">
             Socials:
           </p>
           <div className="flex items-center gap-x-2.5">
-            <div className="border border-black-10 rounded-full flex items-center justify-center  relative w-[40px] h-[40px] overflow-hidden shrink-0">
+            <Link
+              href={"https://www.facebook.com/"}
+              className="border border-black-10 rounded-full flex items-center justify-center  relative w-[40px] h-[40px] overflow-hidden shrink-0"
+            >
               <Image src={assets.facebook} alt="gmail" />
-            </div>
-            <div className="border border-black-10 rounded-full flex items-center justify-center  relative w-[40px] h-[40px] overflow-hidden shrink-0">
+            </Link>
+            <Link
+              href={"https://www.linkedin.com/in/tanyahyacinthfernandez"}
+              className="border border-black-10 rounded-full flex items-center justify-center  relative w-[40px] h-[40px] overflow-hidden shrink-0"
+            >
               <Image src={assets.linkedIn} alt="gmail" />
-            </div>
+            </Link>
           </div>
         </div>
       </div>
