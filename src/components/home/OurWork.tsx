@@ -61,8 +61,9 @@ const OurWork = () => {
         <ProjectDetailsCard data={project} key={index} />
       ))}
       <ClickForCoffeeButton
-        textClassName="text-sm"
-        className="max-w-[60%] mx-auto justify-center py-3 px-5"
+        textClassName="text-xl"
+        className="mt-5 mx-auto justify-center py-2  px-8"
+        imageClassName="w-[64px] h-[48px] !-mt-7 "
       />
     </div>
   );

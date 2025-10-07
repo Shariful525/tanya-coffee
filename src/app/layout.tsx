@@ -5,8 +5,7 @@ import BottomMenuBar from "@/components/layout/BottomMenuBar";
 import Header from "@/components/layout/Header";
 
 const latoFont = Lato({
-  variable: "--font-lato",
-  weight: "400",
+  weight: ["400"],
   subsets: ["latin"],
 });
 
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${latoFont.variable} antialiased`}>
+      <body className={`${latoFont.className} antialiased`}>
         <Header />
         {children}
         <BottomMenuBar />

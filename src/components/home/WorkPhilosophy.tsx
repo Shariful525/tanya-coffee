@@ -55,8 +55,9 @@ const WorkPhilosophy = () => {
 
         <div className="mt-[30px]">
           <ClickForCoffeeButton
-            className="max-w-[60%] mx-auto justify-center py-3 px-5"
-            textClassName="text-sm"
+            textClassName="text-xl"
+            className=" mx-auto justify-center py-2 px-8"
+            imageClassName="w-[64px] h-[48px] !-mt-7 "
           />
         </div>
         <div className="rounded-xl overflow-hidden shadow-lg w-full mt-[30px]">
@@ -64,7 +65,7 @@ const WorkPhilosophy = () => {
             src={"https://i.imgur.com/4AiXzf8.jpg"}
             alt="Cat typing on a laptop with the text I LOVE MY WORK!"
             width={500}
-            height={281}
+            height={360}
             layout="responsive"
             unoptimized={true}
           />
