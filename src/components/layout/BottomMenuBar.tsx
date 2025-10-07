@@ -18,7 +18,7 @@ const BottomMenuBar = () => {
       id: "coffee",
       label: "Coffee Meeting",
       icon: coffeeIcon,
-      href: "/coffee-meeting",
+      href: "/#contactForCoffee",
     },
   ];
 
@@ -33,7 +33,7 @@ const BottomMenuBar = () => {
           border border-white
           px-2
           py-2
-          w-[95vw] max-w-[470px]
+          w-[90vw] max-w-[470px]
         "
       >
         {menus.map((menu) => {

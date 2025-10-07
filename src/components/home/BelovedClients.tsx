@@ -54,7 +54,7 @@ const BelovedClients = ({ className }: { className?: string }) => {
         className="
           grid 
           grid-cols-1 
-          [@media(min-width:400px)]:grid-cols-2 
+          [@media(min-width:350px)]:grid-cols-2 
           md:grid-cols-3 
           lg:grid-cols-4 
           gap-5 bg-white p-5 rounded-[20px]

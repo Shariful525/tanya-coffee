@@ -11,16 +11,16 @@ const MarketingAndAdvertiseCard = ({
   // #> Variant 1: Top image → name → description
   if (variant === "v1") {
     return (
-      <div className="bg-white rounded-2xl p-5 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <div className="bg-white rounded-2xl p-3 [@media(min-width:400px)]:p-5 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-shadow duration-300">
         <div
           className="mb-2 relative w-[40px] h-[40px] 
-          [@media(min-width:400px)]:w-[50px]
-          [@media(min-width:400px)]:h-[50px]
+          [@media(min-width:350px)]:w-[50px]
+          [@media(min-width:350px)]:h-[50px]
         "
         >
           <Image src={data.image} alt={data.title} fill className="inset-0" />
         </div>
-        <h3 className="text-base font-semibold">{data.title}</h3>
+        <h3 className="text-sm font-semibold">{data.title}</h3>
         <p className="text-sm text-black-70 mt-2">{data.description}</p>
       </div>
     );

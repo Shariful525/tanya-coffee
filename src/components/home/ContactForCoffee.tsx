@@ -61,7 +61,7 @@ const ContactForCoffee = () => {
   };
 
   return (
-    <div className="bg-primary rounded-[20px] p-5">
+    <div id="contactForCoffee" className="bg-primary rounded-[20px] p-5">
       <Image src={assets.contactPhoto} alt="" className="px-4" />
       <form className="text-white space-y-4">
         <CustomInput
@@ -144,9 +144,9 @@ const ContactForCoffee = () => {
 
         <ClickForCoffeeButton
           text="Submit"
-          className="justify-center py-3 w-full"
+          className="justify-center py-2 w-full"
           textClassName="text-lg"
-          imageClassName="w-[66px] h-[50px] "
+          imageClassName="w-[66px] h-[50px]"
         />
       </form>
     </div>

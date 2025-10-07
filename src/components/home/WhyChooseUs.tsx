@@ -5,7 +5,7 @@ import NotificationItem from "../shared/NotificationItem";
 
 const WhyChooseUs = () => {
   return (
-    <div className="rounded-t-[20px] p-5 bg-[linear-gradient(180.26deg,_#C9E6FF_-1.01%,_#FFFFFF_99.78%)] space-y-5 mb-32">
+    <div className="rounded-t-[20px] p-5 bg-[linear-gradient(180.26deg,_#C9E6FF_-1.01%,_#FFFFFF_99.78%)] space-y-5 mb-[110px]">
       <div className="space-y-5  flex flex-col items-center text-center">
         <div className="font-bold text-black-80 text-2xl">
           <h2>Why Choose Us</h2>
@@ -81,7 +81,7 @@ const WhyChooseUs = () => {
         </div>
       </div>
       <div className=" border border-black-10 rounded-lg py-3.5 px-6 -mb-12  bg-white">
-        <p className="flex items-center justify-center gap-x-1 text-black-80 font-semibold text-xs whitespace-nowrap">
+        <p className="flex items-center justify-center gap-x-1 text-black-80 font-semibold text-xs [@media(min-width:350px)]:text-[10px] whitespace-nowrap">
           Designed & Developed with
           <Image src={assets.heartPink} width={30} alt="heart" />
           by AdvertisingWork & More

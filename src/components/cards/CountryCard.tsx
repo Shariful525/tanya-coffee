@@ -24,7 +24,7 @@ const CountryCard = ({
             className="inset-0"
           />
         </div>
-        <h3 className="text-base [@media(min-width:400px)]:text-lg font-semibold text-primary uppercase">
+        <h3 className="text-sm [@media(min-width:400px)]:text-base font-semibold text-primary uppercase">
           {country.name}
         </h3>
         <p className="text-sm text-black-70 mt-2">{country.description}</p>

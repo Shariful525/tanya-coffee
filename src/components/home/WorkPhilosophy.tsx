@@ -3,6 +3,7 @@ import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
 import Image from "next/image";
 import { assets } from "@/assets/images";
 import { IconQuoteFilled } from "@tabler/icons-react";
+import TextPlayball from "../shared/TextPlayball";
 
 const WorkPhilosophy = () => {
   return (
@@ -32,9 +33,11 @@ const WorkPhilosophy = () => {
               </span>
             </p>
 
-            <p className="mt-6 text-white text-xl font-['Dancing_Script',_cursive]">
-              &mdash; Richard Branson &mdash;
-            </p>
+            <TextPlayball>
+              <p className="mt-6 text-white text-xl font-['Dancing_Script',_cursive]">
+                &mdash; Richard Branson &mdash;
+              </p>
+            </TextPlayball>
           </div>
         </div>
 
@@ -55,9 +58,9 @@ const WorkPhilosophy = () => {
 
         <div className="mt-[30px]">
           <ClickForCoffeeButton
-            textClassName="text-xl"
-            className=" mx-auto justify-center py-2 px-8"
-            imageClassName="w-[64px] h-[48px] !-mt-7 "
+            textClassName="text-sm"
+            className="max-w-[80%] mx-auto justify-center py-2.5 px-10"
+            imageClassName="w-[64px] h-[48px] !-mt-5"
           />
         </div>
         <div className="rounded-xl overflow-hidden shadow-lg w-full mt-[30px]">

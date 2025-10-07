@@ -26,13 +26,13 @@ const Hero = () => {
           your business.
         </p>
         <ClickForCoffeeButton
-          textClassName="text-xl"
-          className=" mx-auto justify-center py-2.5 px-10"
-          imageClassName="w-[64px] h-[48px] !-mt-8 "
+          textClassName="text-sm"
+          className="max-w-[80%] mx-auto justify-center py-2.5 px-10"
+          imageClassName="w-[64px] h-[48px] !-mt-5"
         />
         <HeroVideoSection />
       </div>
-      <TopBrands classNmae="mt-5" />
+      <TopBrands classNmae="mt-5 max-w-[470px] mx-auto" />
     </div>
   );
 };

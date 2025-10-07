@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className="space-y-10">
       <Hero />
-      <div className="max-w-[470px] mx-auto px-5 space-y-10">
+      <div className="max-w-[470px] mx-auto px-5 md:px-0 space-y-10">
         <AboutUs />
         <AdvertisementAndMarketing />
         <WorkPhilosophy />
@@ -25,8 +25,8 @@ const Home = () => {
         <TopCountries />
         <BelovedClients />
         <ContactForCoffee />
-        <WhyChooseUs />
       </div>
+      <WhyChooseUs />
     </div>
   );
 };

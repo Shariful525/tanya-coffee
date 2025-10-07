@@ -2,6 +2,7 @@ import { assets } from "@/assets/images";
 import Image from "next/image";
 import React from "react";
 import TextPlayball from "../shared/TextPlayball";
+import Link from "next/link";
 
 const ClickForCoffeeButton = ({
   className = "pl-1.5 pr-3.5 py-1.5",
@@ -17,10 +18,11 @@ const ClickForCoffeeButton = ({
   handleClick?: () => void;
 }) => {
   return (
-    <button
+    <Link
       onClick={handleClick}
-      type="submit"
+      // type="submit"
       role="button"
+      href={"#contactForCoffee"}
       className={`cursor-pointer  bg-secondary text-white flex items-center rounded-full relative ${className}`}
     >
       <div className={`${imageClassName} relative -mt-6`}>
@@ -34,7 +36,7 @@ const ClickForCoffeeButton = ({
       <p className={`${textClassName} select-none`}>
         {text} For <TextPlayball>Coffee</TextPlayball>
       </p>
-    </button>
+    </Link>
   );
 };
 
