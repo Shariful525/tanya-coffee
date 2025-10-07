@@ -10,7 +10,7 @@ const ServicesSection: React.FC = () => {
   );
 
   return (
-    <section className="px-5 md:px-0 max-w-[470px] mx-auto pb-40 pt-[30px] bg-gradient-to-b from-[#C9E6FF] to-[#F4F4F4]">
+    <section className="px-5 md:px-0 max-w-[470px] mx-auto pb-24 pt-[30px] bg-gradient-to-b from-[#C9E6FF] to-[#F4F4F4]">
       <h2 className="text-center text-2xl font-bold text-blue-800 mb-1">
         OUR SERVICES
       </h2>
