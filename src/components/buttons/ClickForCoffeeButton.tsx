@@ -22,7 +22,7 @@ const ClickForCoffeeButton = ({
       onClick={handleClick}
       // type="submit"
       role="button"
-      href={"#contactForCoffee"}
+      href={"/#contactForCoffee"}
       className={`cursor-pointer  bg-secondary text-white flex items-center rounded-full relative ${className}`}
     >
       <div className={`${imageClassName} relative -mt-6`}>
