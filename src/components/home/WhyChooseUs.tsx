@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import NotificationItem from "../shared/NotificationItem";
 import Link from "next/link";
+import FlipText from "../ui/FlipText";
 
 const WhyChooseUs = () => {
   return (
@@ -10,9 +11,12 @@ const WhyChooseUs = () => {
       <div className="space-y-5  flex flex-col items-center text-center">
         <div className="font-bold text-black-80 text-2xl">
           <h2>Why Choose Us</h2>
-          <span>Passionate</span>
+          <FlipText
+            variant="slide"
+            className="text-primary text-2xl font-bold"
+          />
         </div>
-        <div className="rounded-[20px] w-full h-[390px]">
+        <div className="rounded-[20px] w-full h-[390px] z-10">
           <video
             src="/assets/video/logo-video.mp4"
             autoPlay
