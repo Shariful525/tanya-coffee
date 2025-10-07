@@ -20,6 +20,19 @@ export const teamMembersData = [
         designation: "Associate Director",
         country: "",
       },
+      {
+        brandLogo: teamMembersAssets?.mindShareLogo.src,
+        brandName: "Mindshare",
+        firstComment:
+          "Tanya, your professionalism and passion for delivering results have always set a benchmark for collaboration.",
+        secondComment:
+          "You go beyond expectations to ensure every campaign reaches its full potential.",
+        thirdComment:
+          "Working with you has been nothing short of inspiring — your energy lifts everyone around you.",
+        fourthComment: "",
+        designation: "Senior Media Manager",
+        country: "Malaysia",
+      },
     ],
   },
   {
@@ -41,6 +54,19 @@ export const teamMembersData = [
         designation: "Associate Director, Retail",
         country: "",
       },
+      {
+        brandLogo: teamMembersAssets?.airAsiaLogo.src,
+        brandName: "AirAsia",
+        firstComment:
+          "Mazin is an exceptional collaborator who brings both creativity and strategy to the table.",
+        secondComment:
+          "He always ensures brand goals are met while maintaining a strong sense of partnership.",
+        thirdComment:
+          "Working with him has been an absolute pleasure — his professionalism and positivity stand out.",
+        fourthComment: "",
+        designation: "Marketing Communications Lead",
+        country: "Malaysia",
+      },
     ],
   },
   {
@@ -61,6 +87,19 @@ export const teamMembersData = [
         fourthComment:
           "On numerous occasions we faced critical system issues or urgent technical challenges & Ron approached these situations with a solution-oriented mindset.",
         designation: "CEO",
+        country: "Malaysia",
+      },
+      {
+        brandLogo: teamMembersAssets?.petronasLogo.src,
+        brandName: "PETRONAS",
+        firstComment:
+          "Ron’s attention to detail and ability to align technology with business goals have always impressed me.",
+        secondComment:
+          "He has an innate ability to lead cross-functional teams and ensure timely delivery without compromising quality.",
+        thirdComment:
+          "Ron is not only a strong technical leader but also a mentor who uplifts the entire team with his collaborative approach.",
+        fourthComment: "",
+        designation: "IT Operations Manager",
         country: "Malaysia",
       },
     ],

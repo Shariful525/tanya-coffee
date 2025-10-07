@@ -4,6 +4,9 @@ import ron from "@/assets/team-members-assets/ron.png";
 import msixAndPartners from "@/assets/team-members-assets/msixandpartners.png";
 import singaporeLogo from "@/assets/team-members-assets/singaporelogo.png";
 import standAeroSpace from "@/assets/team-members-assets/strandaerospace.png";
+import mindShareLogo from "@/assets/team-members-assets/Mindshare.jpg";
+import petronasLogo from "@/assets/team-members-assets/PETRONASLogo.jpg";
+import airAsiaLogo from "@/assets/team-members-assets/air-asia-logo.png";
 export const teamMembersAssets = {
   vicePresident,
   mazin,
@@ -11,4 +14,7 @@ export const teamMembersAssets = {
   msixAndPartners,
   singaporeLogo,
   standAeroSpace,
+  mindShareLogo,
+  petronasLogo,
+  airAsiaLogo,
 };
