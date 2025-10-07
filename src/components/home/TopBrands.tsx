@@ -58,14 +58,14 @@ const TopBrands = ({ classNmae }: { classNmae?: string }) => {
               key={index}
               className=" mx-2 "
             >
+
               <Image
                 src={logo || "brand.png"}
                 alt={"Brand Photo - Expert Squad"}
-                width={400}
+                width={160}
                 height={80}
                 layout="responsive"
-
-                className="object-cover w-full h-full rounded-lg"
+                className="object-contain min-h-10 max-h-12 w-auto"
               />
             </div>
           ))}
