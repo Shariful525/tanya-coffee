@@ -47,7 +47,7 @@ const AccordionItem = ({
         }}
         className={`overflow-hidden bg-primary/10 rounded-b-md`}
       >
-        <ul className="p-5 list-disc text-sm text-gray-700 space-y-1">
+        <ul className="p-5 list-disc text-sm text-black-70 space-y-1">
           {item.description.map((desc, index) => (
             <li key={index}>{desc}</li>
           ))}
