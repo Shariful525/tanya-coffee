@@ -42,16 +42,8 @@
   --color-white-30: var(--white-30);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 body {
   background: var(--bg);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 ::-webkit-scrollbar {
