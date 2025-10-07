@@ -7,19 +7,16 @@ const ClientLogoCard = ({ image, name }: { image: string; name: string }) => {
       flex items-center justify-center 
       rounded-xl 
       border border-black-10
-      hover:shadow-md 
-      transition-shadow 
-      duration-300 
-      p-2
+      p-5
     "
     >
       <Image
         src={image}
         alt={"Beloved Clients Logo"}
-        width={160}
+        width={150}
         height={80}
         layout="responsive"
-        className="object-contain min-h-10 max-h-12 w-auto"
+        className="object-contain min-h-8 max-h-[44px] w-auto"
       />
     </div>
   );

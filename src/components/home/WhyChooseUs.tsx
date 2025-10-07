@@ -68,6 +68,7 @@ const WhyChooseUs = () => {
           </div>
           <Link
             href="mailto:hello@dwaandmore.com"
+            target="_blank"
             className="text-black-70 font-bold text-base"
           >
             hello@dwaandmore.com
@@ -79,6 +80,7 @@ const WhyChooseUs = () => {
           </div>
           <Link
             href="https://wa.me/60108008989?text=hello"
+            target="_blank"
             className="text-black-70 font-bold text-base"
           >
             Click to WhatsApp text message us ONLY. Thank youuuuuuuuuu!🙏
