@@ -6,7 +6,7 @@ import { IconPointFilled } from "@tabler/icons-react";
 
 const MeetYourDreamTeam = () => {
   return (
-    <div className="">
+    <div className="mt-[30px]">
       <div className="flex flex-col items-center gap-y-5 mx-auto text-center">
         <InnerShadow
           icon={<IconPointFilled className="text-primary" />}
@@ -17,9 +17,11 @@ const MeetYourDreamTeam = () => {
           <br /> (& Even More Passion)
         </strong>
       </div>
-      {teamMembersData?.map((data, i) => (
+      <div className="space-y-5 mt-5">
+        {teamMembersData?.map((data, i) => (
         <PartnerCard data={data} key={i} />
       ))}
+      </div>
     </div>
   );
 };

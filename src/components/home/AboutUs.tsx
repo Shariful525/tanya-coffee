@@ -33,9 +33,9 @@ const AboutUs = () => {
           <span className="text-primary font-semibold">FOR YOU</span>.
         </p>
 
-        <div className="relative max-w-md mx-auto bg-white rounded-[20px] p-[clamp(20px,1.5vw,32px)] text-center">
-          <div className="absolute top-8 left-0 text-primary rotate-180">
-            <IconQuoteFilled className="" size={48} stroke={1.5} />
+        <div className="relative bg-white rounded-[20px] p-[clamp(20px,1.5vw,32px)] text-center">
+          <div className="absolute top-0 left-2 text-primary text-[72px] font-serif">
+            “
           </div>
 
           <p className="text-gray-700 text-lg leading-relaxed  p-5">
@@ -55,8 +55,8 @@ const AboutUs = () => {
             <span className="font-semibold text-primary uppercase">OF US</span>.
           </p>
 
-          <div className="absolute bottom-20 right-2 text-primary ">
-            <IconQuoteFilled size={48} stroke={2} />
+          <div className="absolute bottom-20 right-2 text-primary text-[72px] font-serif rotate-180">
+            “
           </div>
 
           <p className="mt-5 text-[clamp(18px,1vw,24px)] text-gray-800  font-[GreatVibes]">

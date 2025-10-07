@@ -6,7 +6,7 @@ import { IconQuoteFilled } from "@tabler/icons-react";
 
 const WorkPhilosophy = () => {
   return (
-    <section className="flex flex-col items-center justify-center bg-white">
+    <section className="flex flex-col items-center justify-center bg-white mt-[30px]">
       <div className="">
         <div className="relative z-10 bg-primary rounded-[20px] flex flex-col items-center py-10 mb-10">
           <div className="w-[226px] h-[330px] relative mb-4">
@@ -21,14 +21,14 @@ const WorkPhilosophy = () => {
 
           <div className="px-5 pt-5 text-center">
             <p className="text-lg font-medium leading-relaxed text-white relative">
-              <span className="absolute -top-10 left-0 text-white rotate-180">
+              <span className="absolute -top-12 -left-2 text-white font-serif text-[72px]">
                 {" "}
-                <IconQuoteFilled size={38} stroke={2} />
+                “
               </span>
               All you have in business is your reputation. Play fair so you can
               sleep soundly at night.
-              <span className="absolute -bottom-8 right-0  text-white">
-                <IconQuoteFilled size={38} stroke={2} />
+              <span className="absolute -bottom-12 -right-3  text-white  font-serif rotate-180 text-[72px]">
+                “
               </span>
             </p>
 

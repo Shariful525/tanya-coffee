@@ -7,8 +7,8 @@ import { IconPointFilled } from "@tabler/icons-react";
 
 const AdvertisementAndMarketing = ({ className }: { className?: string }) => {
   return (
-    <div className={`${className}`}>
-      <div className="flex flex-col gap-y-5 mb-5">
+    <div className={`${className} `}>
+      <div className="flex flex-col gap-y-5">
         <InnerShadow
           text="SERVICES"
           className="mx-auto"
@@ -27,6 +27,7 @@ const AdvertisementAndMarketing = ({ className }: { className?: string }) => {
       </div>
       <div
         className="
+          mt-[30px]
           grid 
           grid-cols-1 
           [@media(min-width:400px)]:grid-cols-2 

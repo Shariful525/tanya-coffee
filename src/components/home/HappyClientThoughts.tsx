@@ -18,7 +18,7 @@ const HappyClientThoughts = () => {
           <br /> (Seriously!)
         </strong>
       </div>
-      <div className="space-y-5">
+      <div className="space-y-5 mt-[30px]">
         {happyClientsData?.map((data, i) => (
           <HappyClientsCard data={data} key={i} />
         ))}

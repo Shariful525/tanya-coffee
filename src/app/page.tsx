@@ -17,7 +17,7 @@ const Home = () => {
       <Hero />
       <div className="max-w-[470px] mx-auto px-5 space-y-10">
         <AboutUs />
-        <AdvertisementAndMarketing className="space-b-10" />
+        <AdvertisementAndMarketing />
         <WorkPhilosophy />
         <HappyClientThoughts />
         <OurWork />
