@@ -14,7 +14,7 @@ const AdvertisementAndMarketing = ({ className }: { className?: string }) => {
           className="mx-auto"
           icon={<IconPointFilled className="fill-primary" />}
         />
-        <h5 className="font-bold text-xl [@media(min-width:400px)]:text-2xl text-center max-w-[90%] mx-auto">
+        <h5 className="font-bold text-lg [@media(min-width:400px)]:text-xl text-center max-w-[95%] mx-auto">
           ADVERTISING, MARKETING, WEBSITE DESIGN & DEVELOPMENT, EVENT MANAGEMENT
           & MORE <strong className="text-primary">SERVICES</strong>
         </h5>
