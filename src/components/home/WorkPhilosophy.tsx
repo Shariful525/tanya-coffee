@@ -21,7 +21,7 @@ const WorkPhilosophy = () => {
           </div>
 
           <div className="px-5 pt-5 text-center">
-            <p className="text-lg font-medium leading-relaxed text-white relative">
+            <p className="text-[clamp(18px,6vw,24px)] font-medium leading-relaxed text-white relative">
               <span className="absolute -top-12 -left-2 text-white font-serif text-[72px]">
                 {" "}
                 “
