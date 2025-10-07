@@ -2,45 +2,51 @@
 import { ITeamMember } from "@/interfaces/teamMember.interface";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import Image from "next/image";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
-const PartnerCard = ({ data }: { data?: ITeamMember }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const cardRef = useRef<HTMLDivElement | null>(null);
+const PartnerCard = ({ data }: { data: ITeamMember }) => {
+  const [reviewIndex, setReviewIndex] = useState(0);
+  const [feedbackPage, setFeedbackPage] = useState(0);
 
   const reviews = data?.personReviews ?? [];
-  const review = reviews[currentIndex];
+  const currentReview = reviews[reviewIndex];
+  const feedbacks = currentReview?.feedbacks ?? [];
 
-  const scrollToTop = () => {
-    if (cardRef.current) {
-      cardRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+  const feedbacksPerPage = 3;
+  const totalFeedbackPages = Math.ceil(feedbacks.length / feedbacksPerPage);
+
+  const currentFeedbacks = feedbacks.slice(
+    feedbackPage * feedbacksPerPage,
+    feedbackPage * feedbacksPerPage + feedbacksPerPage
+  );
+
+  const handleNext = () => {
+    if (feedbackPage + 1 < totalFeedbackPages) {
+      setFeedbackPage((prev) => prev + 1);
+    } else {
+      setReviewIndex((prev) => (prev + 1) % reviews.length);
+      setFeedbackPage(0);
     }
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => {
-      const newIndex = prev === 0 ? reviews.length - 1 : prev - 1;
-      scrollToTop();
-      return newIndex;
-    });
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => {
-      const newIndex = prev === reviews.length - 1 ? 0 : prev + 1;
-      scrollToTop();
-      return newIndex;
-    });
+    if (feedbackPage > 0) {
+      setFeedbackPage((prev) => prev - 1);
+    } else {
+      const prevReviewIndex =
+        (reviewIndex - 1 + reviews.length) % reviews.length;
+      const prevReview = reviews[prevReviewIndex];
+      const totalPrevPages = Math.ceil(
+        (prevReview?.feedbacks?.length ?? 0) / feedbacksPerPage
+      );
+      setReviewIndex(prevReviewIndex);
+      setFeedbackPage(totalPrevPages - 1);
+    }
   };
 
   return (
-    <div
-      ref={cardRef}
-      className="bg-white p-5 rounded-[20px] space-y-4 scroll-mt-10"
-    >
+    <div className="bg-white p-5 rounded-[20px] space-y-4 scroll-mt-10">
+      {/* Profile Section */}
       <div className="w-full space-y-4 text-center">
         <div className="w-full h-[400px] relative group">
           <Image
@@ -61,70 +67,87 @@ const PartnerCard = ({ data }: { data?: ITeamMember }) => {
         </div>
       </div>
 
+      {/* Review Section */}
       <div className="relative overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          style={{ transform: `translateX(-${reviewIndex * 100}%)` }}
         >
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              className="min-w-full p-5 border border-black-10 rounded-[20px] space-y-4"
-            >
-              <div className="w-full max-w-[220px] space-y-2.5 mx-auto text-center">
-                <Image
-                  width={220}
-                  height={100}
-                  src={review?.brandLogo ?? ""}
-                  alt="brand"
-                />
-                <p className="text-primary font-bold text-lg">
-                  {review?.brandName}
-                </p>
-              </div>
-              <div className="flex flex-col items-center gap-y-5 text-center">
-                <p className="text-base text-black-80">
-                  “{review?.firstComment}
-                </p>
-                <p className="text-base text-black-80">
-                  {review?.secondComment}
-                </p>
-                <p className="text-base text-black-80">
-                  {review?.thirdComment}
-                  {review?.fourthComment ? "" : "”"}
-                </p>
-                {review?.fourthComment ? (
-                  <p className="text-base text-black-80">
-                    {review?.fourthComment}
+          {reviews.map((review, index) => {
+            const reviewFeedbacks = review.feedbacks ?? [];
+            const totalPages = Math.ceil(
+              reviewFeedbacks.length / feedbacksPerPage
+            );
+            const visibleFeedbacks =
+              index === reviewIndex ? currentFeedbacks : [];
+
+            return (
+              <div
+                key={index}
+                className="min-w-full p-5 border border-black-10 rounded-[20px] space-y-4"
+              >
+                {/* Brand Info */}
+                <div className="w-full max-w-[220px] space-y-2.5 mx-auto text-center">
+                  <Image
+                    width={220}
+                    height={100}
+                    src={review?.brandLogo ?? ""}
+                    alt="brand"
+                  />
+                  <p className="text-primary font-bold text-lg">
+                    {review?.brandName}
                   </p>
-                ) : null}
-              </div>
-              <div className="border-t border-black-10 pt-4 space-y-2.5">
-                <div className="flex flex-col items-center">
-                  <strong className="font-bold text-primary text-lg">
-                    {review?.designation}
-                  </strong>
-                  <strong className="font-bold text-black-80 text-base">
-                    {review?.brandName} {review?.country}
-                  </strong>
                 </div>
-                <div className="flex items-center justify-center gap-x-2.5">
-                  <button
-                    onClick={handlePrev}
-                    className="border border-primary rounded-full text-primary p-3 flex items-center justify-center cursor-pointer hover:text-white hover:bg-primary transition"
-                  >
-                    <IconChevronLeft />
-                  </button>
-                  <button
-                    onClick={handleNext}
-                    className="border border-primary rounded-full text-primary p-3 flex items-center justify-center cursor-pointer hover:text-white hover:bg-primary transition"
-                  >
-                    <IconChevronRight />
-                  </button>
+
+                {/* Feedback Text */}
+                <div className="flex flex-col items-center gap-y-5 text-center transition-all duration-300 ">
+                  {visibleFeedbacks.map((text, i) => (
+                    <p key={i} className="text-base text-black-80">
+                      {i === 0 ? `“${text}` : text}
+                      {i === visibleFeedbacks.length - 1 &&
+                      feedbackPage === totalPages - 1
+                        ? "”"
+                        : ""}
+                    </p>
+                  ))}
+                </div>
+
+                {/* Footer (designation + controls) */}
+                <div className="border-t border-black-10 pt-4 space-y-2.5">
+                  <div className="flex flex-col items-center">
+                    <strong className="font-bold text-primary text-lg text-center">
+                      {review?.designation}
+                    </strong>
+                    <strong className="font-bold text-black-80 text-base">
+                      {review?.brandName} {review?.country}
+                    </strong>
+                  </div>
+
+                  {/* Navigation */}
+                  <div className="flex items-center justify-center gap-x-2.5">
+                    <button
+                      onClick={handlePrev}
+                      className="border border-primary rounded-full text-primary p-3 flex items-center justify-center cursor-pointer hover:text-white hover:bg-primary transition"
+                    >
+                      <IconChevronLeft />
+                    </button>
+                    <button
+                      onClick={handleNext}
+                      className="border border-primary rounded-full text-primary p-3 flex items-center justify-center cursor-pointer hover:text-white hover:bg-primary transition"
+                    >
+                      <IconChevronRight />
+                    </button>
+                  </div>
+
+                  {totalFeedbackPages > 1 ? (
+                    <p className="text-sm font-medium uppercase text-primary text-center">
+                      Part {feedbackPage + 1}/{totalFeedbackPages}
+                    </p>
+                  ) : null}
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
