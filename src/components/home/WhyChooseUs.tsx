@@ -28,17 +28,17 @@ const WhyChooseUs = () => {
         <p className="uppercase font-bold text-black-80">
           Weekly quizzes for you:
         </p>
-        <NotificationItem />
-        <NotificationItem />
-        <NotificationItem />
+        <NotificationItem photo={assets.quizDemo} />
+        <NotificationItem photo={assets.quiz2} />
+        <NotificationItem photo={assets.quiz3} />
       </div>
       <div className="space-y-5 border-t border-b border-black-10 py-5">
         <p className="uppercase font-bold text-black-80">
           WEEKLY ARTICLES FOR YOU:
         </p>
-        <NotificationItem />
-        <NotificationItem />
-        <NotificationItem />
+        <NotificationItem photo={assets.article1} />
+        <NotificationItem photo={assets.article2} />
+        <NotificationItem photo={assets.article3} />
       </div>
 
       <div className="space-y-5">

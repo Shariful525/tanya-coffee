@@ -26,10 +26,14 @@ const AboutUs = () => {
         <p className="text-center ">
           Our team is a mix of
           <span className="text-primary font-semibold"> DREAMERS</span> &{" "}
-          <span className="text-primary font-semibold">DOERS</span>, we <span className="text-primary font-semibold">are MISFITS </span> for a cause & we are{" "}
-          <span className="text-primary font-semibold">REBELS </span> for a cause when it comes to formulating{" "}
-          <span className="text-primary font-semibold">custom-made</span> advertising, marketing, website/mobile app
-          design & development, event management & more wonders{" "}
+          <span className="text-primary font-semibold">DOERS</span>, we{" "}
+          <span className="text-primary font-semibold">are MISFITS </span> for a
+          cause & we are{" "}
+          <span className="text-primary font-semibold">REBELS </span> for a
+          cause when it comes to formulating{" "}
+          <span className="text-primary font-semibold">custom-made</span>{" "}
+          advertising, marketing, website/mobile app design & development, event
+          management & more wonders{" "}
           <span className="text-primary font-semibold">FOR YOU</span>.
         </p>
 
@@ -88,8 +92,9 @@ const AboutUs = () => {
           </p>
           <div className="mt-[clamp(20px,4vw,40px)]  ">
             <ClickForCoffeeButton
-              className="max-w-[60%] mx-auto justify-center py-3 px-5"
-              textClassName="text-sm"
+              textClassName="text-xl"
+              className=" mx-auto justify-center py-2 px-8"
+              imageClassName="w-[64px] h-[48px] !-mt-7 "
             />
           </div>
         </div>
