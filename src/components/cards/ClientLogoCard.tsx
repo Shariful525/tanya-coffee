@@ -18,7 +18,8 @@ const ClientLogoCard = ({ image, name }: { image: string; name: string }) => {
         alt={"Beloved Clients Logo"}
         width={160}
         height={80}
-        className="object-contain min-h-16 max-h-20 w-auto"
+        layout="responsive"
+        className="object-contain min-h-10 max-h-12 w-auto"
       />
     </div>
   );

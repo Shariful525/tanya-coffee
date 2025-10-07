@@ -52,17 +52,20 @@ const TopBrands = ({ classNmae }: { classNmae?: string }) => {
         & <b className="text-primary uppercase">more</b>.
       </h6>
       <InfiniteSlider speed={1} animationDirection="left" hasShadow>
-        <div className="flex gap-[clamp(12px,2.5vw,20px)] w-max whitespace-nowrap">
+        <div className="flex gap-x-5 w-max whitespace-nowrap">
           {brandImages?.concat(brandImages)?.map((logo, index) => (
             <div
               key={index}
-              className="relative h-[60px] w-[180px] mx-2 shrink-0"
+              className=" mx-2 "
             >
               <Image
                 src={logo || "brand.png"}
                 alt={"Brand Photo - Expert Squad"}
-                fill
-                className="object-cover rounded-lg"
+                width={400}
+                height={80}
+                layout="responsive"
+
+                className="object-cover w-full h-full rounded-lg"
               />
             </div>
           ))}
