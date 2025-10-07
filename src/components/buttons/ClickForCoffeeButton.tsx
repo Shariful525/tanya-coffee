@@ -33,7 +33,7 @@ const ClickForCoffeeButton = ({
           className="object-contain inset-0 w-full h-full"
         />
       </div>
-      <p className={`${textClassName} select-none`}>
+      <p className={`${textClassName}  select-none`}>
         {text} For <TextPlayball>Coffee</TextPlayball>
       </p>
     </Link>

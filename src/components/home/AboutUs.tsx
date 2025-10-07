@@ -31,7 +31,7 @@ const AboutUs = () => {
           cause & we are{" "}
           <span className="text-primary font-semibold">REBELS </span> for a
           cause when it comes to formulating{" "}
-          <span className="text-primary font-semibold">custom-made</span>{" "}
+          <span className="text-primary font-semibold uppercase">custom-made</span>{" "}
           advertising, marketing, website/mobile app design & development, event
           management & more wonders{" "}
           <span className="text-primary font-semibold">FOR YOU</span>.
@@ -92,8 +92,8 @@ const AboutUs = () => {
           </p>
           <div className="mt-[clamp(20px,4vw,40px)]  ">
             <ClickForCoffeeButton
-              textClassName="text-sm"
-              className="max-w-[80%] mx-auto justify-center py-2 px-10"
+              textClassName="text-lg"
+              className="max-w-[80%] mx-auto justify-center py-2 px-[clamp(10px,4vw,32px)]"
               imageClassName="w-[64px] h-[48px] !-mt-5"
             />
           </div>
