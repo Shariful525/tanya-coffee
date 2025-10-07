@@ -22,7 +22,7 @@ interface PhoneNumberInputProps {
 export function PhoneNumberInput({
   value = "",
   onChange,
-  defaultCountry = "BD",
+  defaultCountry = "MY",
   className,
   label,
   disabled = false,
@@ -35,8 +35,6 @@ export function PhoneNumberInput({
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  // Fetch countries once
   useEffect(() => {
     const controller = new AbortController();
 
