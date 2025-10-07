@@ -27,7 +27,7 @@ const Hero = () => {
         </p>
         <ClickForCoffeeButton
           textClassName="text-sm"
-          className="max-w-[80%] mx-auto justify-center py-2.5 px-10"
+          className="max-w-[80%] mx-auto justify-center py-2 px-10"
           imageClassName="w-[64px] h-[48px] !-mt-5"
         />
         <HeroVideoSection />

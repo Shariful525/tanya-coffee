@@ -59,13 +59,15 @@ const ProjectDetailsCard = ({ data }: { data?: IProject }) => {
           return (
             <div
               key={idx}
-              className={`relative rounded-xl overflow-hidden ${heightClass}`}
+              className={`relative rounded-xl w-full overflow-hidden ${heightClass}`}
             >
               <Image
                 src={img}
                 alt={`Project image ${idx + 1}`}
-                fill
-                className="object-contain"
+                width={350}
+                height={200}
+
+                className="w-full h-full"
               />
             </div>
           );
