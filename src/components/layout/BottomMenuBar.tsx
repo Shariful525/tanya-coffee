@@ -1,14 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import homeIcon from "@/assets/images/home-menu.png";
-import serviceIcon from "@/assets//images/services-menu.png";
-import coffeeIcon from "@/assets//images/coffee-menu.png";
-import Link from "next/link";
+import serviceIcon from "@/assets/images/services-menu.png";
+import coffeeIcon from "@/assets/images/coffee-menu.png";
 
 const BottomMenuBar = () => {
-  const [active, setActive] = useState("home");
+  const pathname = usePathname();
 
   const menus = [
     { id: "home", label: "Home", icon: homeIcon, href: "/" },
@@ -36,12 +37,14 @@ const BottomMenuBar = () => {
         "
       >
         {menus.map((menu) => {
-          const isActive = active === menu.id;
+          const isActive =
+            pathname === menu.href ||
+            (menu.href !== "/" && pathname.startsWith(menu.href));
+
           return (
             <Link
               key={menu.id}
               href={menu.href}
-              onClick={() => setActive(menu.id)}
               className={`
                 flex items-center justify-center gap-2 px-3 py-2 rounded-full transition-all duration-300
                 ${
