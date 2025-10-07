@@ -2,25 +2,45 @@
 import { ITeamMember } from "@/interfaces/teamMember.interface";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const PartnerCard = ({ data }: { data?: ITeamMember }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const cardRef = useRef<HTMLDivElement | null>(null);
 
   const reviews = data?.personReviews ?? [];
   const review = reviews[currentIndex];
 
+  const scrollToTop = () => {
+    if (cardRef.current) {
+      cardRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+    setCurrentIndex((prev) => {
+      const newIndex = prev === 0 ? reviews.length - 1 : prev - 1;
+      scrollToTop();
+      return newIndex;
+    });
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => {
+      const newIndex = prev === reviews.length - 1 ? 0 : prev + 1;
+      scrollToTop();
+      return newIndex;
+    });
   };
 
   return (
-    <div className="bg-white p-5 rounded-[20px] space-y-4">
-      {/* profile info */}
+    <div
+      ref={cardRef}
+      className="bg-white p-5 rounded-[20px] space-y-4 scroll-mt-10"
+    >
       <div className="w-full space-y-4 text-center">
         <div className="w-full h-[400px] relative group">
           <Image
@@ -41,7 +61,6 @@ const PartnerCard = ({ data }: { data?: ITeamMember }) => {
         </div>
       </div>
 
-      {/* feedback card */}
       <div className="relative overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
