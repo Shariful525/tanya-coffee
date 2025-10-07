@@ -1,7 +1,5 @@
 "use client";
-
 import React from "react";
-
 const InnerShadow = ({
   icon,
   text = "Hello dear",
@@ -24,10 +22,10 @@ const InnerShadow = ({
       }}
     >
       <span>{icon}</span>
-      {text && <span className="ml-2">{text}</span>}
+      {text && <span className="ml-1">{text}</span>}
       <style jsx>{`
         div {
-          box-shadow: inset 0 0 10px 10px var(--shadow-color);
+          box-shadow: inset 0 0 8px 5px var(--shadow-color);
         }
         div:hover {
           box-shadow: inset 0 0 10px 10px var(--hover-shadow-color);

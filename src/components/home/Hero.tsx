@@ -20,14 +20,14 @@ const Hero = () => {
         </h2>
         <p className="text-black-70 text-center text-base mb-5">
           We help brands turn bold ideas into{" "}
-          <b className="text-primary ">powerful</b> experiences
+          <b className="text-primary uppercase font-semibold">powerful</b> experiences
           for your customers. From strategy to design, every detail is crafted
           to engage users. Delivering solutions that inspire, convert, and grow
           your business.
         </p>
         <ClickForCoffeeButton
-          textClassName="text-sm"
-          className="max-w-[80%] mx-auto justify-center py-2 px-10"
+          textClassName="text-lg"
+          className="max-w-[80%] mx-auto justify-center py-2 px-[clamp(10px,4vw,32px)]"
           imageClassName="w-[64px] h-[48px] !-mt-5"
         />
         <HeroVideoSection />

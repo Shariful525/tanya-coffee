@@ -2,12 +2,11 @@ import React from "react";
 import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
 import Image from "next/image";
 import { assets } from "@/assets/images";
-import { IconQuoteFilled } from "@tabler/icons-react";
 import TextPlayball from "../shared/TextPlayball";
 
 const WorkPhilosophy = () => {
   return (
-    <section className="flex flex-col items-center justify-center bg-white mt-[30px]">
+    <section className="flex flex-col items-center justify-center bg-white rounded-b-lg mt-[30px]">
       <div className="">
         <div className="relative z-10 bg-primary rounded-[20px] flex flex-col items-center py-10 mb-10">
           <div className="w-[226px] h-[330px] relative mb-4">
@@ -26,7 +25,8 @@ const WorkPhilosophy = () => {
                 {" "}
                 “
               </span>
-              All you have in business is your <br /> reputation. Play fair so you can <br />
+              All you have in business is your <br /> reputation. Play fair so
+              you can <br />
               sleep soundly at night.
               <span className="absolute -bottom-11 right-2  text-white  font-serif rotate-180 text-[72px]">
                 “
@@ -56,14 +56,14 @@ const WorkPhilosophy = () => {
 
         <div className="mt-[30px]">
           <ClickForCoffeeButton
-            textClassName="text-sm"
-            className="max-w-[80%] mx-auto justify-center py-2 px-10"
+            textClassName="text-lg"
+            className="max-w-[80%] mx-auto justify-center py-2 px-[clamp(10px,4vw,32px)]"
             imageClassName="w-[64px] h-[48px] !-mt-5"
           />
         </div>
         <div className="rounded-xl overflow-hidden shadow-lg w-full mt-[30px]">
           <Image
-            src={"https://i.imgur.com/4AiXzf8.jpg"}
+            src={"/assets/working-cat.gif"}
             alt="Cat typing on a laptop with the text I LOVE MY WORK!"
             width={500}
             height={360}

@@ -1,3 +1,5 @@
+import demoImg from "../assets/images/article2.png";
+
 export interface ServiceSubItem {
   title: string;
   description: string[];
@@ -17,7 +19,7 @@ export const servicesData: ServiceItem[] = [
     title: "Full Service Marketing Agencies",
     subtitle:
       "Powering the world’s leading brands with cutting-edge advertising and strategy.",
-    image: "/images/services/marketing.jpg",
+    image: demoImg.src,
     details: [
       {
         title: "Campaign Strategy & Planning",

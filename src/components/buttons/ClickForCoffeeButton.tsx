@@ -22,7 +22,7 @@ const ClickForCoffeeButton = ({
       onClick={handleClick}
       // type="submit"
       role="button"
-      href={"#contactForCoffee"}
+      href={"/#contactForCoffee"}
       className={`cursor-pointer  bg-secondary text-white flex items-center rounded-full relative ${className}`}
     >
       <div className={`${imageClassName} relative -mt-6`}>
@@ -33,7 +33,7 @@ const ClickForCoffeeButton = ({
           className="object-contain inset-0 w-full h-full"
         />
       </div>
-      <p className={`${textClassName} select-none`}>
+      <p className={`${textClassName}  select-none`}>
         {text} For <TextPlayball>Coffee</TextPlayball>
       </p>
     </Link>

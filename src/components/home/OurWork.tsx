@@ -49,11 +49,13 @@ const OurWork = () => {
         <div className="bg-white rounded-2xl  py-10">
           <h3 className="text-xl font-semibold text-primary mb-4">OUR WORK</h3>
           <div className="w-48 h-[250px] mx-auto relative">
-            <Image
-              src={assets.successMedal.src}
-              alt="100% Success Rate Medal"
-              layout="fill"
-              objectFit="contain"
+            <video
+              src="/assets/video/successratess.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover rounded-[20px]"
             />
           </div>
         </div>
@@ -62,8 +64,8 @@ const OurWork = () => {
         <ProjectDetailsCard data={project} key={index} />
       ))}
       <ClickForCoffeeButton
-        textClassName="text-sm"
-        className="max-w-[80%] mx-auto justify-center py-2 px-10"
+        textClassName="text-lg"
+        className="max-w-[80%] mx-auto justify-center py-2 px-[clamp(10px,4vw,32px)]"
         imageClassName="w-[64px] h-[48px] !-mt-5"
       />
     </div>
