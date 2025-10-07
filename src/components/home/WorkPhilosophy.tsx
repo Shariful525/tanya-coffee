@@ -21,14 +21,14 @@ const WorkPhilosophy = () => {
           </div>
 
           <div className="px-5 pt-5 text-center">
-            <p className="text-[clamp(18px,6vw,24px)] font-medium leading-relaxed text-white relative">
+            <p className="text-[1.26rem] font-medium leading-relaxed text-white relative">
               <span className="absolute -top-12 -left-2 text-white font-serif text-[72px]">
                 {" "}
                 “
               </span>
-              All you have in business is your reputation. Play fair so you can
+              All you have in business is your <br /> reputation. Play fair so you can <br />
               sleep soundly at night.
-              <span className="absolute -bottom-12 -right-3  text-white  font-serif rotate-180 text-[72px]">
+              <span className="absolute -bottom-11 right-2  text-white  font-serif rotate-180 text-[72px]">
                 “
               </span>
             </p>
