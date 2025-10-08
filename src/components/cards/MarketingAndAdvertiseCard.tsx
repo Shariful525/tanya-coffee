@@ -18,7 +18,7 @@ const MarketingAndAdvertiseCard = ({
           [@media(min-width:350px)]:h-[50px]
         "
         >
-          <Image src={data.image} alt={data.title} fill className="inset-0" />
+          <Image src={data.image} alt={data.title} fill className="inset-0 w-full h-full object-contain" />
         </div>
         <h3 className="text-sm font-semibold">{data.title}</h3>
         <p className="text-sm text-black-70 mt-2">{data.description}</p>
