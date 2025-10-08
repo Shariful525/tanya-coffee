@@ -13,12 +13,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, onClick }) => {
       onClick={() => onClick(service)}
       className="cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-lg transition p-3 flex items-center gap-4"
     >
-      <div className="relative w-20 h-16">
+      <div className="relative shrink-0 rounded-lg w-20 h-20">
         <Image
           src={service.image}
           alt={service.title}
           fill
-          className="inset-0"
+          className="object-cover inset-0 rounded-lg"
         />
       </div>
       <div>

@@ -1,3 +1,4 @@
+import { assets_service } from "@/app/services/_assets";
 import demoImg from "../assets/images/article2.png";
 
 export interface ServiceSubItem {
@@ -19,7 +20,7 @@ export const servicesData: ServiceItem[] = [
     title: "Full Service Marketing Agencies",
     subtitle:
       "Powering the world’s leading brands with cutting-edge advertising and strategy.",
-    image: demoImg.src,
+    image: assets_service.serviceImage1.src,
     details: [
       {
         title: "Campaign Strategy & Planning",
@@ -95,7 +96,7 @@ export const servicesData: ServiceItem[] = [
     title: "Full Service Website Design Agencies",
     subtitle:
       "Building engaging digital experiences that drive measurable results.",
-    image: "/images/services/web-design.jpg",
+    image: assets_service.serviceImage2.src,
     details: [
       {
         title: "Website Strategy & Planning",
@@ -128,7 +129,7 @@ export const servicesData: ServiceItem[] = [
     title: "Search Engine Optimization (SEO)",
     subtitle:
       "Improve visibility and drive organic traffic with proven SEO strategies.",
-    image: "/images/services/seo.jpg",
+    image: assets_service.serviceImage3.src,
     details: [
       {
         title: "Technical SEO",
@@ -161,7 +162,7 @@ export const servicesData: ServiceItem[] = [
     title: "Social Media Management",
     subtitle:
       "Grow your audience and increase brand awareness through social storytelling.",
-    image: "/images/services/social-media.jpg",
+    image: assets_service.serviceImage4.src,
     details: [
       {
         title: "Social Strategy & Content Calendar",
@@ -194,7 +195,7 @@ export const servicesData: ServiceItem[] = [
     title: "Branding & Identity Design",
     subtitle:
       "Craft memorable brand experiences that connect with your audience emotionally.",
-    image: "/images/services/branding.jpg",
+    image: assets_service.serviceImage5.src,
     details: [
       {
         title: "Brand Discovery & Research",
@@ -226,7 +227,7 @@ export const servicesData: ServiceItem[] = [
     title: "E-commerce Development",
     subtitle:
       "Launch high-performance online stores that convert visitors into buyers.",
-    image: "/images/services/ecommerce.jpg",
+    image: assets_service.serviceImage6.src,
     details: [
       {
         title: "Platform Setup & Customization",
@@ -252,126 +253,126 @@ export const servicesData: ServiceItem[] = [
       },
     ],
   },
-  {
-    id: 7,
-    title: "Mobile App Design & Development",
-    subtitle:
-      "Build cross-platform mobile apps that deliver seamless digital experiences.",
-    image: "/images/services/mobile-app.jpg",
-    details: [
-      {
-        title: "App Strategy & Research",
-        description: [
-          "Define core app objectives and user personas.",
-          "Analyze competitors and feature benchmarks.",
-        ],
-      },
-      {
-        title: "UI/UX Design",
-        description: [
-          "Design modern, gesture-friendly interfaces.",
-          "Focus on user retention and conversion-driven UX flows.",
-        ],
-      },
-      {
-        title: "App Development & Deployment",
-        description: [
-          "Build with React Native, Flutter, or native stacks.",
-          "Test across iOS and Android devices.",
-          "Handle app store publishing and post-launch support.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 8,
-    title: "Performance Marketing (PPC)",
-    subtitle: "Maximize ROI through data-driven paid advertising campaigns.",
-    image: "/images/services/ppc.jpg",
-    details: [
-      {
-        title: "Campaign Setup & Targeting",
-        description: [
-          "Create Google Ads, Meta, and LinkedIn campaigns.",
-          "Target audiences using interest and behavioral data.",
-          "Use retargeting to re-engage previous visitors.",
-        ],
-      },
-      {
-        title: "Ad Design & Copywriting",
-        description: [
-          "Craft high-converting headlines and CTAs.",
-          "Design visual ads optimized for various placements.",
-        ],
-      },
-      {
-        title: "Optimization & Reporting",
-        description: [
-          "A/B test ads, keywords, and landing pages.",
-          "Monitor ROAS and cost-per-acquisition.",
-          "Provide transparent weekly performance reports.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 9,
-    title: "Video Production & Motion Graphics",
-    subtitle:
-      "Tell your brand’s story through powerful visuals and storytelling.",
-    image: "/images/services/video.jpg",
-    details: [
-      {
-        title: "Pre-Production & Scripting",
-        description: [
-          "Develop creative concepts and storyboards.",
-          "Write scripts and plan shot lists.",
-        ],
-      },
-      {
-        title: "Filming & Editing",
-        description: [
-          "Shoot with high-end cameras and lighting setups.",
-          "Add transitions, effects, and background music.",
-        ],
-      },
-      {
-        title: "Animation & Motion Graphics",
-        description: [
-          "Design explainer animations and logo reveals.",
-          "Animate text and visuals for social reels.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 10,
-    title: "Software Development & Automation",
-    subtitle:
-      "Transform your operations with custom-built software and intelligent automation.",
-    image: "/images/services/software.jpg",
-    details: [
-      {
-        title: "Custom Web Applications",
-        description: [
-          "Develop scalable applications using modern frameworks (Next.js, Node.js).",
-          "Implement authentication, dashboards, and analytics.",
-        ],
-      },
-      {
-        title: "Business Process Automation",
-        description: [
-          "Integrate CRMs, ERPs, and task management tools.",
-          "Automate repetitive workflows using APIs and scripts.",
-        ],
-      },
-      {
-        title: "Maintenance & Security",
-        description: [
-          "Monitor uptime and performance continuously.",
-          "Apply regular security patches and updates.",
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 7,
+  //   title: "Mobile App Design & Development",
+  //   subtitle:
+  //     "Build cross-platform mobile apps that deliver seamless digital experiences.",
+  //   image: "/images/services/mobile-app.jpg",
+  //   details: [
+  //     {
+  //       title: "App Strategy & Research",
+  //       description: [
+  //         "Define core app objectives and user personas.",
+  //         "Analyze competitors and feature benchmarks.",
+  //       ],
+  //     },
+  //     {
+  //       title: "UI/UX Design",
+  //       description: [
+  //         "Design modern, gesture-friendly interfaces.",
+  //         "Focus on user retention and conversion-driven UX flows.",
+  //       ],
+  //     },
+  //     {
+  //       title: "App Development & Deployment",
+  //       description: [
+  //         "Build with React Native, Flutter, or native stacks.",
+  //         "Test across iOS and Android devices.",
+  //         "Handle app store publishing and post-launch support.",
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 8,
+  //   title: "Performance Marketing (PPC)",
+  //   subtitle: "Maximize ROI through data-driven paid advertising campaigns.",
+  //   image: "/images/services/ppc.jpg",
+  //   details: [
+  //     {
+  //       title: "Campaign Setup & Targeting",
+  //       description: [
+  //         "Create Google Ads, Meta, and LinkedIn campaigns.",
+  //         "Target audiences using interest and behavioral data.",
+  //         "Use retargeting to re-engage previous visitors.",
+  //       ],
+  //     },
+  //     {
+  //       title: "Ad Design & Copywriting",
+  //       description: [
+  //         "Craft high-converting headlines and CTAs.",
+  //         "Design visual ads optimized for various placements.",
+  //       ],
+  //     },
+  //     {
+  //       title: "Optimization & Reporting",
+  //       description: [
+  //         "A/B test ads, keywords, and landing pages.",
+  //         "Monitor ROAS and cost-per-acquisition.",
+  //         "Provide transparent weekly performance reports.",
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 9,
+  //   title: "Video Production & Motion Graphics",
+  //   subtitle:
+  //     "Tell your brand’s story through powerful visuals and storytelling.",
+  //   image: "/images/services/video.jpg",
+  //   details: [
+  //     {
+  //       title: "Pre-Production & Scripting",
+  //       description: [
+  //         "Develop creative concepts and storyboards.",
+  //         "Write scripts and plan shot lists.",
+  //       ],
+  //     },
+  //     {
+  //       title: "Filming & Editing",
+  //       description: [
+  //         "Shoot with high-end cameras and lighting setups.",
+  //         "Add transitions, effects, and background music.",
+  //       ],
+  //     },
+  //     {
+  //       title: "Animation & Motion Graphics",
+  //       description: [
+  //         "Design explainer animations and logo reveals.",
+  //         "Animate text and visuals for social reels.",
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 10,
+  //   title: "Software Development & Automation",
+  //   subtitle:
+  //     "Transform your operations with custom-built software and intelligent automation.",
+  //   image: "/images/services/software.jpg",
+  //   details: [
+  //     {
+  //       title: "Custom Web Applications",
+  //       description: [
+  //         "Develop scalable applications using modern frameworks (Next.js, Node.js).",
+  //         "Implement authentication, dashboards, and analytics.",
+  //       ],
+  //     },
+  //     {
+  //       title: "Business Process Automation",
+  //       description: [
+  //         "Integrate CRMs, ERPs, and task management tools.",
+  //         "Automate repetitive workflows using APIs and scripts.",
+  //       ],
+  //     },
+  //     {
+  //       title: "Maintenance & Security",
+  //       description: [
+  //         "Monitor uptime and performance continuously.",
+  //         "Apply regular security patches and updates.",
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
