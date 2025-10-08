@@ -47,15 +47,16 @@ const OurWork = () => {
           (Teamwork made the <br /> dream work!)
         </p>
 
-        <div className="bg-white rounded-2xl  py-10">
+        <div className=" rounded-2xl bg-[#fbf9f7fc] py-10">
           <h3 className="text-xl font-semibold text-primary mb-4">OUR WORK</h3>
-          <div className="w-60 h-[280px] mx-auto relative">
+          <div className="w-72 h-[350px] mx-auto relative">
             <video
               src="/assets/video/successratess.mp4"
               autoPlay
               loop
               muted
               playsInline
+
               className="w-full h-full object-cover rounded-[20px]"
             />
           </div>
