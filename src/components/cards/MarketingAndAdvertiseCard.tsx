@@ -11,7 +11,7 @@ const MarketingAndAdvertiseCard = ({
   // #> Variant 1: Top image → name → description
   if (variant === "v1") {
     return (
-      <div className="bg-white rounded-2xl p-3 [@media(min-width:400px)]:p-5 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <div className="bg-white rounded-2xl p-3 [@media(min-width:400px)]:p-5 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-shadow duration-300 h-full">
         <div
           className="mb-2 relative w-[40px] h-[40px] 
           [@media(min-width:350px)]:w-[50px]

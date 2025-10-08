@@ -8,6 +8,7 @@ import { assets } from "@/assets/images";
 import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
 import CustomTextarea from "../shared/CustomTextArea";
 import { PhoneNumberInput } from "../shared/PhoneInput";
+import { motion } from "framer-motion";
 
 const services = [
   "Advertising",
@@ -61,34 +62,87 @@ const ContactForCoffee = () => {
   };
 
   return (
-    <div id="contactForCoffee" className="bg-primary rounded-[20px] p-5">
-      <Image src={assets.contactPhoto} alt="" className="px-4" />
-      <form className="text-white space-y-4">
-        <CustomInput
-          label="Your Full Name"
-          name="fullName"
-          value={formData.fullName}
-          onChange={handleChange}
-          placeholder="Dominic Benizi Pereira"
-          required
-        />
+    <motion.div
+      id="contactForCoffee"
+      className="bg-primary rounded-[20px] p-5"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 50 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      {/* Contact Image */}
+      <motion.div
+        className="px-4 mb-5"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+      >
+        <Image src={assets.contactPhoto} alt="" />
+      </motion.div>
 
-        <PhoneNumberInput
-          label="Phone Number"
-          value={formData.phone}
-          onChange={handlePhoneChange}
-        />
+      {/* Form */}
+      <motion.form
+        className="text-white space-y-4"
+        onSubmit={handleSubmit}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ staggerChildren: 0.15 }}
+      >
+        {/** Fade/slide wrapper for each input element **/}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <CustomInput
+            label="Your Full Name"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            placeholder="Dominic Benizi Pereira"
+            required
+          />
+        </motion.div>
 
-        <CustomInput
-          label="Your LinkedIn URL"
-          name="linkedin"
-          type="url"
-          value={formData.linkedin}
-          onChange={handleChange}
-          placeholder="http://linkedin.com/in/username"
-        />
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <PhoneNumberInput
+            label="Phone Number"
+            value={formData.phone}
+            onChange={handlePhoneChange}
+          />
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <CustomInput
+            label="Your LinkedIn URL"
+            name="linkedin"
+            type="url"
+            value={formData.linkedin}
+            onChange={handleChange}
+            placeholder="http://linkedin.com/in/username"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <label className="block mb-1 text-base">Services You Require</label>
           <CustomSelect
             options={services}
@@ -96,19 +150,31 @@ const ContactForCoffee = () => {
             onChange={(value) => handleSelectChange("service", value)}
             placeholder="Select the service you require"
           />
-        </div>
+        </motion.div>
 
-        <CustomInput
-          label="Your Email Address"
-          name="email"
-          type="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="demo@hello.com"
-          required
-        />
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <CustomInput
+            label="Your Email Address"
+            name="email"
+            type="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="demo@hello.com"
+            required
+          />
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <label className="block mb-1 font-medium">
             Your Estimated Investment
           </label>
@@ -118,38 +184,67 @@ const ContactForCoffee = () => {
             onChange={(value) => handleSelectChange("investment", value)}
             placeholder="Select Your Estimated Investment"
           />
-        </div>
+        </motion.div>
 
-        <CustomTextarea
-          label="Your Message To Us"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="Message us & say hello. We would love to hear from you 😍"
-        />
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <CustomTextarea
+            label="Your Message To Us"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Message us & say hello. We would love to hear from you 😍"
+          />
+        </motion.div>
 
-        <CustomCheckbox
-          label="Email me AdvertisingWorks & More’s Company Profile."
-          checked={formData.companyProfile}
-          onChange={(checked) =>
-            handleCheckboxChange("companyProfile", checked)
-          }
-        />
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <CustomCheckbox
+            label="Email me AdvertisingWorks & More’s Company Profile."
+            checked={formData.companyProfile}
+            onChange={(checked) =>
+              handleCheckboxChange("companyProfile", checked)
+            }
+          />
+        </motion.div>
 
-        <CustomCheckbox
-          label="Send me monthly advertising, marketing, website/mobile app design & development tips."
-          checked={formData.monthlyTips}
-          onChange={(checked) => handleCheckboxChange("monthlyTips", checked)}
-        />
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <CustomCheckbox
+            label="Send me monthly advertising, marketing, website/mobile app design & development tips."
+            checked={formData.monthlyTips}
+            onChange={(checked) => handleCheckboxChange("monthlyTips", checked)}
+          />
+        </motion.div>
 
-        <ClickForCoffeeButton
-          text="Submit"
-          className="justify-center py-2 w-full"
-          textClassName="text-lg"
-          imageClassName="w-[66px] h-[50px]"
-        />
-      </form>
-    </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          whileHover={{ scale: 1.02 }}
+        >
+          <ClickForCoffeeButton
+            text="Submit"
+            className="justify-center py-2 w-full"
+            textClassName="text-lg"
+            imageClassName="w-[66px] h-[50px]"
+          />
+        </motion.div>
+      </motion.form>
+    </motion.div>
   );
 };
 
