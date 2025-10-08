@@ -48,7 +48,7 @@ const OurWork = () => {
 
         <div className="bg-white rounded-2xl  py-10">
           <h3 className="text-xl font-semibold text-primary mb-4">OUR WORK</h3>
-          <div className="w-48 h-[250px] mx-auto relative">
+          <div className="w-60 h-[280px] mx-auto relative">
             <video
               src="/assets/video/successratess.mp4"
               autoPlay
