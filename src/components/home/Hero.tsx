@@ -22,13 +22,15 @@ const fadeInUp: Variants = {
 const Hero = () => {
   return (
     <motion.div
+      className="bg-gradient-to-b from-[#C9E6FF] to-white relative"
       initial="hidden"
       animate="visible"
       transition={{ staggerChildren: 0.15 }}
     >
+      <div className={`absolute -bottom-10  h-10 w-full bg-gradient-to-b  from-white to-transparent z-transparent z-10 pointer-events-none `} />
       <motion.div
         variants={fadeInUp}
-        className="max-w-[470px] mx-auto mb-5 bg-gradient-to-b from-[#C9E6FF] to-white py-[30px] px-5 rounded-2xl shadow-md"
+        className="max-w-[470px] mx-auto mb-5  py-[30px] px-5 rounded-t-2xl"
       >
         <motion.div variants={fadeInUp}>
           <InnerShadow
@@ -70,8 +72,9 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div variants={fadeInUp}>
-        <TopBrands classNmae="mt-5 max-w-[470px] mx-auto" />
+      <motion.div
+        variants={fadeInUp}>
+        <TopBrands />
       </motion.div>
     </motion.div>
   );

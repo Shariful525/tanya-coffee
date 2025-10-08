@@ -45,7 +45,7 @@ const TopBrands = ({ className }: { className?: string }) => {
   ];
 
   return (
-    <div className={className}>
+    <div className={`max-w-[470px] mx-auto py-[30px]`}>
       <h6 className="font-medium text-lg text-center mb-[30px] px-5">
         Brands who trust us with their advertising,{" "}
         <b className="text-primary uppercase">marketing</b>, Web Design &
@@ -53,7 +53,7 @@ const TopBrands = ({ className }: { className?: string }) => {
         & <b className="text-primary uppercase">more</b>.
       </h6>
 
-      <InfiniteSlider speed={2} direction="left" hasShadow>
+      <InfiniteSlider speed={2} direction="left" hasShadow >
 
         {[...brandImages, ...brandImages].map((logo, i) => (
           <div key={i} className=" min-w-[160px] flex justify-center">
@@ -62,7 +62,7 @@ const TopBrands = ({ className }: { className?: string }) => {
               alt="Brand logo"
               width={160}
               height={80}
-              className="object-contain h-12 w-auto"
+              className="object-contain h-12 w-auto blur-"
             />
           </div>
         ))}
