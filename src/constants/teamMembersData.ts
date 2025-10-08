@@ -273,13 +273,13 @@ export const teamMembersData = [
         designation: "CEO",
         country: "Malaysia",
       },
-      {
-        brandLogo: teamMembersAssets?.petronasLogo.src,
-        brandName: "PETRONAS",
-        feedbacks: [],
-        designation: "IT Operations Manager",
-        country: "Malaysia",
-      },
+      // {
+      //   brandLogo: teamMembersAssets?.petronasLogo.src,
+      //   brandName: "PETRONAS",
+      //   feedbacks: [],
+      //   designation: "IT Operations Manager",
+      //   country: "Malaysia",
+      // },
     ],
   },
 ];
