@@ -20,15 +20,22 @@ const OurWork = () => {
 
         <div className="mt-[24px] relative">
           <span className="absolute -top-6 left-0">
-
-            <Image src={assets.greenQuotation1} alt="blue quotation" className="" />
+            <Image
+              src={assets.greenQuotation1}
+              alt="blue quotation"
+              className=""
+            />
           </span>
           <p className="text-black-80 text-[24px] font-bold relative px-4">
             We go because if you are not aiming for{" "}
             <strong className="text-spring-green">GREATNESS</strong>, what is
             the point?
             <span className="absolute bottom-0 right-0 ">
-              <Image src={assets.greenQuotation2} alt="blue quotation" className="" />
+              <Image
+                src={assets.greenQuotation2}
+                alt="blue quotation"
+                className=""
+              />
             </span>
           </p>
           <div className=" mx-auto my-4 w-[250px]">
@@ -56,7 +63,6 @@ const OurWork = () => {
               loop
               muted
               playsInline
-
               className="w-full h-full object-cover rounded-[20px]"
             />
           </div>
