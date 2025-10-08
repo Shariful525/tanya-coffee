@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const OurWork = () => {
   return (
-    <div className="space-y-16 overflow-hidden">
+    <div className="space-y-10 overflow-hidden">
       <motion.div
         className="bg-white rounded-2xl p-5 relative text-center shadow-lg"
         initial={{ opacity: 0, x: -50 }}
@@ -74,8 +74,8 @@ const OurWork = () => {
         className="mx-auto w-full text-center space-y-6"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5 }}
       >
         <h2 className="text-2xl font-bold uppercase">
           SOME OF OUR & OUR CLIENTS <br /> WORK
@@ -88,8 +88,8 @@ const OurWork = () => {
           className="rounded-2xl bg-[#fbf9f7fc] py-10 shadow-inner"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h3 className="text-xl font-semibold text-primary mb-4">OUR WORK</h3>
           <div className="w-72 h-[350px] mx-auto relative overflow-hidden rounded-[20px]">
@@ -105,16 +105,16 @@ const OurWork = () => {
         </motion.div>
       </motion.div>
 
-      <div className="mt-10 space-y-8">
+      <div className="space-y-8">
         {projectsData?.map((project, index) => {
           const isEven = index % 2 === 0;
           return (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+              initial={{ opacity: 0, x: isEven ? -40 : 40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.8, delay: index * 0.15 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.8 }}
               whileHover={{
                 scale: 1.03,
                 y: -6,

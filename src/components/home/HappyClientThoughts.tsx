@@ -12,20 +12,20 @@ const HappyClientThoughts = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.35,
-        delayChildren: 0.2,
+        staggerChildren: 0.12,
+        delayChildren: 0.1,
       },
     },
   };
 
   const cardVariants: Variants = {
-    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    hidden: { opacity: 0, y: 25, scale: 0.95 },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.3,
         ease: [0.25, 0.1, 0.25, 1],
       },
     },
@@ -43,7 +43,7 @@ const HappyClientThoughts = () => {
         whileInView={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.8, ease: "easeOut" },
+          transition: { duration: 0.5, ease: "easeOut" },
         }}
         viewport={{ once: true }}
         className="flex flex-col items-center gap-y-[30px] max-w-[215px] mx-auto"
@@ -64,7 +64,7 @@ const HappyClientThoughts = () => {
         variants={cardContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         {happyClientsData?.map((data, i) => (
           <motion.div

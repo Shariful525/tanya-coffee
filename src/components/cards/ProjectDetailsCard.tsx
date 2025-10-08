@@ -5,7 +5,7 @@ import SpecializedListItem from "../shared/SpecializedListItem";
 
 const ProjectDetailsCard = ({ data }: { data?: IProject }) => {
   return (
-    <div className="bg-white p-5 rounded-[20px] space-y-5 my-[30px]">
+    <div className="bg-white p-5 rounded-[20px] space-y-5">
       <div className="flex items-center justify-center gap-x-2.5 w-full">
         {data?.clientLogos?.map((logo, index) => (
           <div
@@ -66,7 +66,6 @@ const ProjectDetailsCard = ({ data }: { data?: IProject }) => {
                 alt={`Project image ${idx + 1}`}
                 width={350}
                 height={200}
-
                 className="w-full h-full"
               />
             </div>
