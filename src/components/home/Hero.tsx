@@ -20,7 +20,10 @@ const fadeInUp: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1.0] },
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1.0],
+    },
   },
 };
 
@@ -71,9 +74,9 @@ const Hero = () => {
           />
         </motion.div>
 
-        <motion.div variants={fadeInUp} className="w-full">
+        <div className="w-full">
           <HeroVideoSection />
-        </motion.div>
+        </div>
 
         <motion.div variants={fadeInUp} className="mt-10 w-full">
           <TopBrands />

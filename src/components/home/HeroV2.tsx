@@ -1,36 +1,36 @@
 "use client";
 import React from "react";
-import { motion, Variants } from "framer-motion";
+import { motion, type Easing } from "framer-motion";
 import TopBrands from "./TopBrands";
 import InnerShadow from "../ui/InnerShadow";
 import { IconPointFilled } from "@tabler/icons-react";
 import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
 import HeroVideoSection from "./HeroVideoSection";
 
-const Hero = () => {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
-    },
-  };
+const customEase: Easing = [0.25, 0.1, 0.25, 1.0]; // 👈 cast as Easing
+
+const fadeUp = (delay: number) => ({
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: {
+    duration: 0.6,
+    delay,
+    ease: customEase,
+  },
+  viewport: { once: true, amount: 0.4 },
+});
+
+const HeroV2 = () => {
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      className="bg-gradient-to-b from-[#C9E6FF] to-white relative"
-    >
+    <div className="bg-gradient-to-b from-[#C9E6FF] to-white relative overflow-hidden">
+      {/* Subtle bottom gradient */}
       <div className="absolute -bottom-10 h-10 w-full bg-gradient-to-b from-white to-transparent z-10 pointer-events-none" />
 
-      <motion.div className="max-w-[470px] mx-auto mb-5 py-[30px] px-5 rounded-t-2xl flex flex-col items-center space-y-5">
+      <div className="max-w-[470px] mx-auto mb-5 py-[30px] px-5 rounded-t-2xl flex flex-col items-center space-y-6">
+        {/* Title Tag */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          viewport={{ amount: 0.1 }}
+          {...fadeUp(0.1)}
+          style={{ willChange: "transform, opacity" }}
         >
           <InnerShadow
             text="Dwaandmore"
@@ -39,23 +39,21 @@ const Hero = () => {
           />
         </motion.div>
 
+        {/* Heading */}
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          viewport={{ amount: 0.1 }}
+          {...fadeUp(0.25)}
           className="text-center text-2xl [@media(min-width:400px)]:text-3xl font-bold mt-2 mb-3"
+          style={{ willChange: "transform, opacity" }}
         >
           <b className="italic text-secondary">Every idea</b>, Every Need <br />
           Right Here, Ready <b className="italic text-secondary">To Rock!</b>
         </motion.h2>
 
+        {/* Description */}
         <motion.p
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-          viewport={{ amount: 0.2 }}
+          {...fadeUp(0.4)}
           className="text-black-70 text-center text-base mb-5"
+          style={{ willChange: "transform, opacity" }}
         >
           We help brands turn bold ideas into{" "}
           <b className="text-primary uppercase font-semibold">powerful</b>{" "}
@@ -64,12 +62,11 @@ const Hero = () => {
           convert, and grow your business.
         </motion.p>
 
+        {/* Coffee Button */}
         <motion.div
-          initial={{ opacity: 0, y: 45 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          viewport={{ amount: 0.2 }}
+          {...fadeUp(0.55)}
           className="max-w-[80%] mx-auto"
+          style={{ willChange: "transform, opacity" }}
         >
           <ClickForCoffeeButton
             textClassName="text-lg"
@@ -78,28 +75,26 @@ const Hero = () => {
           />
         </motion.div>
 
+        {/* Video Section */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          viewport={{ amount: 0.3 }}
+          {...fadeUp(0.7)}
           className="w-full"
+          style={{ willChange: "transform, opacity" }}
         >
           <HeroVideoSection />
         </motion.div>
 
+        {/* Brand Section */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          viewport={{ amount: 0.1 }}
+          {...fadeUp(0.85)}
           className="mt-10 w-full"
+          style={{ willChange: "transform, opacity" }}
         >
           <TopBrands />
         </motion.div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
-export default Hero;
+export default HeroV2;

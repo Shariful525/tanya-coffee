@@ -1,37 +1,16 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const HeroVideoSection = () => {
-  const iframeRef = useRef<HTMLIFrameElement | null>(null);
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [loadVideo, setLoadVideo] = useState(false);
 
   useEffect(() => {
-    const iframe = iframeRef.current;
-    const container = containerRef.current;
-    if (!iframe || !container) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (!iframe.src) {
-              iframe.src = iframe.dataset.src!;
-            }
-          } else {
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(container);
-
-    return () => observer.disconnect();
+    const timer = setTimeout(() => setLoadVideo(true), 700);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div
-      ref={containerRef}
       className="
         relative 
         mx-auto 
@@ -41,17 +20,21 @@ const HeroVideoSection = () => {
         rounded-2xl 
         bg-white 
         shadow-[0_0_25px_#01519899]
+        will-change-transform
       "
     >
-      <div className="rounded-xl overflow-hidden">
-        <iframe
-          ref={iframeRef}
-          data-src="https://www.youtube.com/embed/sAJyhErLAio?si=rmf0ZZn29uvWlRVT"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          className="w-full min-h-[250px] h-auto rounded-xl"
-          title="Hero Video"
-        ></iframe>
+      <div className="rounded-xl overflow-hidden bg-black">
+        {loadVideo ? (
+          <iframe
+            src="https://www.youtube.com/embed/sAJyhErLAio?si=rmf0ZZn29uvWlRVT"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            className="w-full min-h-[250px] h-auto rounded-xl"
+            title="Hero Video"
+          ></iframe>
+        ) : (
+          <div className="w-full min-h-[250px] bg-gradient-to-b from-blue-100 to-blue-50 animate-pulse rounded-xl" />
+        )}
       </div>
     </div>
   );
