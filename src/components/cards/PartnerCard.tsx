@@ -13,7 +13,7 @@ const PartnerCard = ({ data }: { data: ITeamMember }) => {
   const currentReview = reviews[reviewIndex];
   const feedbacks = currentReview?.feedbacks ?? [];
 
-  const feedbacksPerPage = 3;
+  const feedbacksPerPage = 4;
   const totalFeedbackPages = Math.ceil(feedbacks.length / feedbacksPerPage);
 
   const currentFeedbacks = feedbacks.slice(
@@ -139,20 +139,23 @@ const PartnerCard = ({ data }: { data: ITeamMember }) => {
                   </div>
 
                   {/* Navigation */}
-                  <div className="flex items-center justify-center gap-x-2.5">
-                    <button
-                      onClick={handlePrev}
-                      className="border border-primary rounded-full text-primary p-3 flex items-center justify-center cursor-pointer hover:text-white hover:bg-primary transition"
-                    >
-                      <IconChevronLeft />
-                    </button>
-                    <button
-                      onClick={handleNext}
-                      className="border border-primary rounded-full text-primary p-3 flex items-center justify-center cursor-pointer hover:text-white hover:bg-primary transition"
-                    >
-                      <IconChevronRight />
-                    </button>
-                  </div>
+
+                  {reviews?.length > 1 ? (
+                    <div className="flex items-center justify-center gap-x-2.5">
+                      <button
+                        onClick={handlePrev}
+                        className="border border-primary rounded-full text-primary p-3 flex items-center justify-center cursor-pointer hover:text-white hover:bg-primary transition"
+                      >
+                        <IconChevronLeft />
+                      </button>
+                      <button
+                        onClick={handleNext}
+                        className="border border-primary rounded-full text-primary p-3 flex items-center justify-center cursor-pointer hover:text-white hover:bg-primary transition"
+                      >
+                        <IconChevronRight />
+                      </button>
+                    </div>
+                  ) : null}
 
                   {totalFeedbackPages > 1 ? (
                     <p className="text-sm font-medium uppercase text-primary text-center">
