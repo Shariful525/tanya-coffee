@@ -22,7 +22,7 @@ const WorkPhilosophy = () => {
 
   return (
     <motion.section
-      className="flex flex-col items-center justify-center bg-white rounded-b-lg mt-[30px]"
+      className="flex flex-col items-center justify-center bg-white rounded-[20px] mt-[30px]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -69,7 +69,7 @@ const WorkPhilosophy = () => {
             All you have in business is your <br /> reputation. Play fair so you
             can <br />
             sleep soundly at night.
-            <span className="absolute right-0">
+            <span className="absolute -right-2">
               <Image src={assets.whiteQuotation2} alt="white quotation" />
             </span>
           </p>
