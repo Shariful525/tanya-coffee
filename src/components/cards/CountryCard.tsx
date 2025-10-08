@@ -11,7 +11,7 @@ const CountryCard = ({
   // #> Variant 1: Top image → name → description
   if (variant === "v1") {
     return (
-      <div className="bg-white rounded-2xl p-5 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <div className="bg-white rounded-2xl p-5 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-shadow duration-300 h-full">
         <div
           className="mb-1 relative w-[50px] h-[50px] 
           [@media(min-width:400px)]:w-[60px]
