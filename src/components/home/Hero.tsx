@@ -30,15 +30,8 @@ const Hero = () => {
       className="bg-gradient-to-b from-[#C9E6FF] to-white relative"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
-      variants={{
-        hidden: { opacity: 0 },
-        visible: {
-          opacity: 1,
-          transition: { staggerChildren: 0.12, delayChildren: 0.15 },
-        },
-      }}
-      style={{ willChange: "transform, opacity" }}
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
     >
       <div className="absolute -bottom-10 h-10 w-full bg-gradient-to-b from-white to-transparent z-10 pointer-events-none" />
 
