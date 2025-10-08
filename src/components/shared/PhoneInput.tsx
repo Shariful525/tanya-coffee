@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 interface Country {
   name: string;
@@ -174,46 +174,46 @@ export function PhoneNumberInput({
           </button>
 
           {isOpen && (
-            <div className="absolute z-50 mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-lg">
-              <div className="p-2 border-b border-gray-200">
+            <div className="absolute z-50 mt-2.5 w-40 bg-white border rounded-lg shadow-lg overflow-hidden animate-fadeIn">
+              {/* Search bar */}
+              <div className="sticky top-0 bg-white px-3 py-2 border-b border-gray-100">
                 <input
                   type="text"
-                  placeholder="Search country..."
+                  placeholder="Search country"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-3 py-2 text-sm bg-white border border-gray-300 rounded-md focus:outline-none text-black"
+                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 placeholder-gray-400 transition-all"
                 />
               </div>
 
-              <div className="max-h-60 overflow-y-auto">
+              {/* Country list */}
+              <div className="max-h-64 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                 {filteredCountries.length > 0 ? (
                   filteredCountries.map((country) => (
                     <button
                       key={country.code}
                       type="button"
                       onClick={() => handleCountrySelect(country)}
-                      className={`w-full flex items-center gap-3 px-3 py-2 text-left hover:bg-blue-50 transition-colors ${
-                        selectedCountry?.code === country.code
-                          ? "bg-blue-100"
-                          : ""
-                      }`}
+                      className={`w-full flex items-center gap-3 px-4 py-2 text-left transition-all duration-150 cursor-pointer
+              ${
+                selectedCountry?.code === country.code
+                  ? "bg-blue-50"
+                  : "hover:bg-bg"
+              }`}
                     >
                       <img
                         src={country.flag || "/placeholder.svg"}
                         alt={country.name}
-                        className="w-6 h-4 object-cover rounded"
+                        className="w-6 h-4 object-cover rounded-sm shadow-sm"
                       />
-                      <span className="flex-1 text-sm truncate text-black">
-                        {country.name}
-                      </span>
-                      <span className="text-sm font-medium text-gray-600">
+                      <span className="text-sm font-medium text-gray-800">
                         {country.dialCode}
                       </span>
                     </button>
                   ))
                 ) : (
-                  <div className="px-3 py-4 text-sm text-center text-gray-500">
-                    No countries found
+                  <div className="px-4 py-5 text-sm text-center text-gray-500">
+                    No countries found 😕
                   </div>
                 )}
               </div>

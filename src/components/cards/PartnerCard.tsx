@@ -2,11 +2,12 @@
 import { ITeamMember } from "@/interfaces/teamMember.interface";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const PartnerCard = ({ data }: { data: ITeamMember }) => {
   const [reviewIndex, setReviewIndex] = useState(0);
   const [feedbackPage, setFeedbackPage] = useState(0);
+  const cardRef = useRef<HTMLDivElement | null>(null);
 
   const reviews = data?.personReviews ?? [];
   const currentReview = reviews[reviewIndex];
@@ -19,11 +20,22 @@ const PartnerCard = ({ data }: { data: ITeamMember }) => {
     feedbackPage * feedbacksPerPage,
     feedbackPage * feedbacksPerPage + feedbacksPerPage
   );
+  const scrollToTop = () => {
+    if (cardRef.current) {
+      cardRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   const handleNext = () => {
     if (feedbackPage + 1 < totalFeedbackPages) {
+      scrollToTop();
+
       setFeedbackPage((prev) => prev + 1);
     } else {
+      scrollToTop();
       setReviewIndex((prev) => (prev + 1) % reviews.length);
       setFeedbackPage(0);
     }
@@ -32,6 +44,7 @@ const PartnerCard = ({ data }: { data: ITeamMember }) => {
   const handlePrev = () => {
     if (feedbackPage > 0) {
       setFeedbackPage((prev) => prev - 1);
+      scrollToTop();
     } else {
       const prevReviewIndex =
         (reviewIndex - 1 + reviews.length) % reviews.length;
@@ -41,6 +54,7 @@ const PartnerCard = ({ data }: { data: ITeamMember }) => {
       );
       setReviewIndex(prevReviewIndex);
       setFeedbackPage(totalPrevPages - 1);
+      scrollToTop();
     }
   };
 
@@ -70,6 +84,7 @@ const PartnerCard = ({ data }: { data: ITeamMember }) => {
       {/* Review Section */}
       <div className="relative overflow-hidden">
         <div
+          ref={cardRef}
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${reviewIndex * 100}%)` }}
         >

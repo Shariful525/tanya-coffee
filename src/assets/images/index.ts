@@ -17,6 +17,13 @@ import quiz3 from "@/assets/images/quiz3.png";
 import article1 from "@/assets/images/article1.png";
 import article2 from "@/assets/images/article2.png";
 import article3 from "@/assets/images/article3.png";
+import blueQuotation1 from "@/assets/images/blueQuotation1.png";
+import blueQuotation2 from "@/assets/images/blueQuotation2.png";
+import whiteQuotation1 from "@/assets/images/whiteQuotation1.png";
+import whiteQuotation2 from "@/assets/images/whiteQuotation2.png";
+import greenQuotation1 from "@/assets/images/greenQuotation1.png";
+import greenQuotation2 from "@/assets/images/greenQuotation2.png";
+
 export const assets = {
   coffeeCup,
   contactPhoto,
@@ -37,4 +44,10 @@ export const assets = {
   article1,
   article2,
   article3,
+  blueQuotation1,
+  blueQuotation2,
+  whiteQuotation1,
+  whiteQuotation2,
+  greenQuotation1,
+  greenQuotation2,
 };
