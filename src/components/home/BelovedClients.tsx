@@ -1,5 +1,7 @@
-import clientsLogo from "@/assets/clients-logo";
+"use client";
 import React from "react";
+import { motion, Variants } from "framer-motion";
+import clientsLogo from "@/assets/clients-logo";
 import ClientLogoCard from "../cards/ClientLogoCard";
 
 const {
@@ -42,15 +44,45 @@ const CLIENT_LOGOS = [
   { id: 17, image: clientLogo17.src },
 ];
 
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] },
+  },
+};
+
 const BelovedClients = ({ className }: { className?: string }) => {
   return (
-    <div className={`${className}`}>
-      <h6 className="font-bold text-xl [@media(min-width:400px)]:text-2xl text-center mb-8">
+    <motion.div
+      className={className}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <motion.h6
+        variants={itemVariants}
+        className="font-bold text-xl [@media(min-width:400px)]:text-2xl text-center mb-8"
+      >
         Some Of Our <br />
         <b className="text-primary uppercase">Beloved</b> Clients
-      </h6>
+      </motion.h6>
 
-      <div
+      <motion.div
+        variants={containerVariants}
         className="
           grid 
           grid-cols-1 
@@ -61,14 +93,12 @@ const BelovedClients = ({ className }: { className?: string }) => {
         "
       >
         {CLIENT_LOGOS.map((logo) => (
-          <ClientLogoCard
-            key={logo.id}
-            image={logo.image}
-            name={`Client ${logo.id}`}
-          />
+          <motion.div key={logo.id} variants={itemVariants}>
+            <ClientLogoCard image={logo.image} name={`Client ${logo.id}`} />
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
