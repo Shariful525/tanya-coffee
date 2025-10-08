@@ -4,6 +4,7 @@ import Image from "next/image";
 import { IconPointFilled, IconQuoteFilled } from "@tabler/icons-react";
 import { assets } from "@/assets/images";
 import ClickForCoffeeButton from "../buttons/ClickForCoffeeButton";
+import TextPlayball from "../shared/TextPlayball";
 
 const AboutUs = () => {
   return (
@@ -23,7 +24,7 @@ const AboutUs = () => {
             className="w-full h-auto rounded-[20px]"
           />
         </div>
-        <p className="text-center ">
+        <p className="text-center  ">
           Our team is a mix of
           <span className="text-primary font-semibold"> DREAMERS</span> &{" "}
           <span className="text-primary font-semibold">DOERS</span>, we{" "}
@@ -37,12 +38,13 @@ const AboutUs = () => {
           <span className="text-primary font-semibold">FOR YOU</span>.
         </p>
 
-        <div className="relative bg-white rounded-[20px] p-[clamp(20px,1.5vw,32px)] text-center">
-          <div className="absolute top-0 left-2 text-primary text-[72px] font-serif">
-            “
+        <div className="relative bg-white rounded-[20px] p-[clamp(20px,1.5vw,32px)] text-center space-y-5">
+          <div className="relative">
+            <div className="absolute -top-2 left-0 ">
+              <Image src={assets.blueQuotation1} alt="blue quotation" className="" />
           </div>
 
-          <p className="text-gray-700 text-lg leading-relaxed  p-5">
+            <p className="text-gray-700 text-lg leading-relaxed  mx-auto  p-5">
             While simultaneously
             <span className="font-semibold text-primary uppercase">
               {" "}
@@ -59,12 +61,14 @@ const AboutUs = () => {
             <span className="font-semibold text-primary uppercase">OF US</span>.
           </p>
 
-          <div className="absolute bottom-20 right-2 text-primary text-[72px] font-serif rotate-180">
-            “
+            <div className="absolute bottom-2 right-2 ">
+              <Image src={assets.blueQuotation2} alt="blue quotation" className="" />
+            </div>
           </div>
-
-          <p className="mt-5 text-[clamp(18px,1vw,24px)] text-gray-800  font-[GreatVibes]">
-            – Tanya Hyacinth D’Silva–Fernandez –
+          <p className=" text-2xl font-semibold text-gray-800  font-[GreatVibes]">
+            <TextPlayball>
+              – Tanya Hyacinth D’Silva–Fernandez –
+            </TextPlayball>
           </p>
         </div>
 

@@ -2,39 +2,37 @@
 
 import React, { ReactNode } from "react";
 
+interface InfiniteSliderProps {
+  children: ReactNode;
+  speed?: number;
+  direction?: "left" | "right";
+  hasShadow?: boolean;
+}
+
 const InfiniteSlider = ({
   children,
   speed = 25,
-  animationDirection = "left",
+  direction = "left",
   hasShadow = true,
-}: {
-  children: ReactNode;
-  speed?: number;
-  animationDirection?: "left" | "right";
-  hasShadow: boolean;
-}) => {
+}: InfiniteSliderProps) => {
   const duration = 100 / speed;
 
   return (
     <div className="relative w-full overflow-hidden py-2 flex items-center group">
-      {hasShadow ? (
+      {hasShadow && (
         <>
-          <div className="absolute left-0 top-0 h-full w-24 pointer-events-none bg-gradient-to-r from-[#f4f4f4] to-transparent z-10" />
-          <div className="absolute right-0 top-0 h-full w-24 pointer-events-none bg-gradient-to-l from-[#f4f4f4] to-transparent z-10" />
+          <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#f4f4f4] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#f4f4f4] to-transparent z-10 pointer-events-none" />
         </>
-      ) : null}
+      )}
 
       <div
-        className={`flex whitespace-nowrap gap-[40px] ${
-          animationDirection === "left"
-            ? "animate-slider-left"
-            : "animate-slider-right"
+        className={`flex whitespace-nowrap ${direction === "left" ? "animate-slider-left" : "animate-slider-right"
         } group-hover:[animation-play-state:paused]`}
         style={{
           animationDuration: `${duration}s`,
         }}
       >
-        {children}
         {children}
       </div>
 
@@ -44,7 +42,7 @@ const InfiniteSlider = ({
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-50% - 20px));
+            transform: translateX(-50%);
           }
         }
         .animate-slider-left {
@@ -53,7 +51,7 @@ const InfiniteSlider = ({
 
         @keyframes slider-right {
           0% {
-            transform: translateX(calc(-50% - 20px));
+            transform: translateX(-50%);
           }
           100% {
             transform: translateX(0);
